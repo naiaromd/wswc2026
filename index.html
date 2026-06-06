@@ -1571,7 +1571,7 @@ function submitForm() {
     total_amount: totalAmt === 0 ? 'FREE' : totalAmt.toLocaleString() + ' THB',
     industry: indOther ? ('Other: ' + indOther) : industry,
     hear_from: hearFrom,
-    interests: interests,
+    interests: ['int-wt','int-ai','int-ttm','int-tbeauty','int-skin','int-biz','int-ws','int-partner'].filter(id=>document.getElementById(id)?.checked).map(id=>id.replace('int-','')).join(', '),
     marketing_consent: marketing,
     promo_code: document.getElementById('promo-code').value,
     hear_from: hearFrom
@@ -1583,11 +1583,6 @@ function submitForm() {
   const accessCode = document.getElementById('member-code')?.value ||
     document.getElementById('partner-code')?.value ||
     document.getElementById('inv-code')?.value || '';
-  const interests = ['int-wt','int-ai','int-ttm','int-tbeauty','int-skin','int-biz','int-ws','int-partner']
-    .filter(id => document.getElementById(id)?.checked)
-    .map(id => id.replace('int-',''))
-    .join(', ');
-  const marketing = document.querySelector('input[name="marketing"]:checked')?.value || 'no';
   const params = new URLSearchParams({
     fname: document.getElementById('fname').value,
     lname: document.getElementById('lname').value,
@@ -1607,11 +1602,11 @@ function submitForm() {
     total: payload.total_amount,
     industry: payload.industry,
     industry_other: document.getElementById('ind-other-text')?.value || '',
-    interests: interests,
+    interests: ['int-wt','int-ai','int-ttm','int-tbeauty','int-skin','int-biz','int-ws','int-partner'].filter(id=>document.getElementById(id)?.checked).map(id=>id.replace('int-','')).join(', '),
     hear_from: payload.hear_from,
     pay_method: document.getElementById('pay-method')?.value || '',
     promo: payload.promo_code,
-    marketing: marketing
+    marketing: document.querySelector('input[name="marketing"]:checked')?.value || 'no'
   });
   fetch('https://script.google.com/macros/s/AKfycbwURG4His4Sc4Gf6UkjhVeQ01-p41EG_LH7YZ_2h_zG4do9lPczIFH-u-vqe4fH6CJdnA/exec', {
     method: 'POST',
