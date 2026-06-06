@@ -1292,28 +1292,41 @@ function validateStep(step, next) {
   }
 
   if (step === 3) {
+    const VALID_CODES = {
+      'member':  'MWSWC2026',
+      'partner': 'AWSWC2026',
+      'vip':     'VIPWSWC2026',
+      'sponsor': 'SWSWC2026',
+    };
     if (regType === 'member') {
-      if (!document.getElementById('member-code').value.trim()) {
-        alert('กรุณากรอก Access Code สำหรับ TSPA Member'); return false;
-      }
-    }
-    if (regType === 'licensed') {
-      if (!document.getElementById('license-no').value.trim() || !document.getElementById('license-by').value) {
-        alert('กรุณากรอก License Number และหน่วยงานที่ออกใบอนุญาต'); return false;
-      }
+      const code = document.getElementById('member-code').value.trim().toUpperCase();
+      if (!code) { alert('กรุณากรอก Access Code สำหรับ TSPA Member'); return false; }
+      if (code !== VALID_CODES.member) { alert('Access Code ไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง'); return false; }
     }
     if (regType === 'partner') {
-      if (!document.getElementById('partner-code').value.trim()) {
-        alert('กรุณากรอก Access Code สำหรับ Alliance Partner'); return false;
-      }
+      const code = document.getElementById('partner-code').value.trim().toUpperCase();
+      if (!code) { alert('กรุณากรอก Access Code สำหรับ Alliance Partner'); return false; }
+      if (code !== VALID_CODES.partner) { alert('Access Code ไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง'); return false; }
+    }
+    if (regType === 'vip') {
+      const code = document.getElementById('inv-code').value.trim().toUpperCase();
+      if (!code) { alert('กรุณากรอก Access Code สำหรับ VIP'); return false; }
+      if (code !== VALID_CODES.vip) { alert('Access Code ไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง'); return false; }
+    }
+    if (regType === 'sponsor') {
+      const code = document.getElementById('inv-code').value.trim().toUpperCase();
+      if (!code) { alert('กรุณากรอก Access Code สำหรับ Sponsor'); return false; }
+      if (code !== VALID_CODES.sponsor) { alert('Access Code ไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง'); return false; }
     }
     if (regType === 'media') {
       if (!document.getElementById('media-outlet').value.trim() || !document.getElementById('media-type').value) {
         alert('กรุณากรอกชื่อสื่อและประเภทสื่อ'); return false;
       }
     }
-    if ((regType === 'vip' || regType === 'sponsor') && !document.getElementById('inv-code').value.trim()) {
-      alert('กรุณากรอก Invitation Code'); return false;
+    if (regType === 'licensed') {
+      if (!document.getElementById('license-no').value.trim() || !document.getElementById('license-by').value) {
+        alert('กรุณากรอก License Number และหน่วยงานที่ออกใบอนุญาต'); return false;
+      }
     }
   }
 
@@ -1355,7 +1368,7 @@ function updateVerifyBoxes() {
   const boxes = ['v-member','v-licensed','v-partner','v-media','v-vip','v-none'];
   boxes.forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.classList.remove('show');
+    if (el) { el.classList.remove('show'); el.style.display = ''; }
   });
 
   const vip_types = ['vip','sponsor'];
