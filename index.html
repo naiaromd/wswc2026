@@ -1564,26 +1564,15 @@ function submitForm() {
   };
 
   // Submit via Web3Forms
+  // Send to Google Sheets (no-cors to bypass CORS redirect)
   fetch('https://script.google.com/macros/s/AKfycbyidbSs6HvGO_rNda6Lmzy0Wuh4luIEWgBkZFGofW3PMwU9efZF2Gi6D-gBxLCOvYukwA/exec', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
-  })
-  .then(r => r.json())
-  .then(data => {
-    if (data.success || data.status === 'ok') {
-      showSuccess();
-    } else {
-      // Fallback: show success anyway and log
-      console.log('Form response:', data);
-      showSuccess();
-    }
-  })
-  .catch(err => {
-    // Fallback: still show success (configure Web3Forms key later)
-    console.log('Submit error (check Web3Forms key):', err);
-    showSuccess();
-  });
+  }).catch(err => console.log('Sheet error:', err));
+  // Show success immediately (no-cors doesn't return readable response)
+  showSuccess();
 }
 
 function showSuccess() {
