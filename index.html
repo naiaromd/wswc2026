@@ -1201,7 +1201,7 @@ function validateStep(step, next) {
       document.getElementById('country').classList.add('err'); ok = false;
     } else document.getElementById('country').classList.remove('err');
     if (!ok) { alert('กรุณากรอกข้อมูลที่จำเป็นให้ครบถ้วน'); return false; }
-    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(document.getElementById('email').value)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value)) {
       alert('กรุณากรอก Email ให้ถูกต้อง'); return false;
     }
   }
