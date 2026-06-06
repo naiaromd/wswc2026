@@ -279,32 +279,17 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 <!-- NAV -->
 <nav class="nav">
   <a class="nav-logo" href="#">
-    <!-- WSWC Droplet SVG mini -->
-    <svg width="24" height="28" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 2 C20 2 4 18 4 30 C4 39.5 11.2 46 20 46 C28.8 46 36 39.5 36 30 C36 18 20 2 20 2Z" fill="none" stroke="#C9A96E" stroke-width="2.5"/>
-      <path d="M20 12 C20 12 11 22 11 30 C11 35 15 38 20 38" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-    </svg>
-    <span class="nav-brand">World Spa &amp; Well-being Congress</span>
+    <img src="wswc.png" height="36" alt="WSWC 2026" style="height:36px;width:auto;object-fit:contain;border-radius:2px;">
   </a>
   <span class="nav-evt">26 June 2026 · QSNCC</span>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <!-- WSWC Logo -->
-  <div class="hero-logo">
-    <svg width="90" height="106" viewBox="0 0 90 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M45 4 C45 4 8 34 8 62 C8 85 24.5 100 45 100 C65.5 100 82 85 82 62 C82 34 45 4 45 4Z" fill="none" stroke="#C9A96E" stroke-width="3"/>
-      <!-- Inner spiral -->
-      <path d="M45 22 C45 22 22 42 22 62 C22 74 31 82 45 82" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
-      <!-- Thai 9-like ornament -->
-      <circle cx="45" cy="55" r="12" fill="none" stroke="#C9A96E" stroke-width="2" opacity="0.7"/>
-      <path d="M45 43 C45 43 45 38 50 38 C55 38 57 43 55 48 C53 53 48 55 45 55" stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-    </svg>
+  <!-- WSWC Banner Logo -->
+  <div class="hero-logo" style="margin-bottom:24px">
+    <img src="wswc.png" alt="World Spa & Well-being Congress 2026" style="max-width:560px;width:90%;height:auto;border-radius:4px;">
   </div>
-  <div class="hero-eye">Thai Spa Association presents</div>
-  <h1 class="hero-title serif">World Spa &amp; Well-being Congress 2026</h1>
-  <div class="hero-venue">AT COSMOPROF CBE ASEAN, QSNCC</div>
   <div class="hero-chips">
     <div class="hchip"><i data-lucide="calendar" style="width:13px;height:13px"></i> 26 มิถุนายน 2569 · 26 June 2026</div>
     <div class="hchip"><i data-lucide="map-pin" style="width:13px;height:13px"></i> QSNCC · Bangkok, Thailand</div>
@@ -473,189 +458,25 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 
 <!-- REGISTRATION FORM -->
 <section class="form-sec" id="register">
-  <div class="form-wrap">
+  <div class="form-wrap" style="max-width:800px">
     <div class="form-hd">
       <div class="eye" style="display:block">Registration</div>
       <h2 class="h2" style="font-size:32px">ลงทะเบียนเข้าร่วมงาน</h2>
-      <p style="font-size:15px;color:var(--ink-700);margin-top:4px">กรอกข้อมูล 4 ขั้นตอน — รับ e-badge ยืนยันการเข้าร่วม WSWC 2026</p>
+      <p style="font-size:15px;color:var(--ink-700);margin-top:4px">กรอกข้อมูลเพื่อรับ e-badge เข้าร่วม WSWC 2026 — ไม่มีค่าใช้จ่ายสำหรับสมาชิก</p>
     </div>
-
-    <!-- Progress -->
-    <div class="prog" id="progBar">
-      <div class="sni act" id="sn1"><div class="sdot">1</div><div class="slbl">ตัวตน</div></div>
-      <div class="sni" id="sn2"><div class="sdot">2</div><div class="slbl">ประเภท</div></div>
-      <div class="sni" id="sn3"><div class="sdot">3</div><div class="slbl">Sessions</div></div>
-      <div class="sni" id="sn4"><div class="sdot">4</div><div class="slbl">ยืนยัน</div></div>
-    </div>
-
-    <div class="fc" id="formCard">
-
-      <!-- STEP 1 -->
-      <div class="fs act" id="step1">
-        <div class="fs-title">ข้อมูลส่วนตัว</div>
-        <div class="fs-desc">ข้อมูลพื้นฐานสำหรับยืนยันการลงทะเบียนและออก e-badge</div>
-        <div class="row"><div class="field"><label>ชื่อ <span class="req">*</span></label><input type="text" id="fname" placeholder="ชื่อจริง / First Name"></div><div class="field"><label>นามสกุล <span class="req">*</span></label><input type="text" id="lname" placeholder="นามสกุล / Last Name"></div></div>
-        <div class="row"><div class="field"><label>ตำแหน่ง <span class="req">*</span></label><input type="text" id="position" placeholder="เช่น Spa Director, Founder"></div><div class="field"><label>องค์กร / บริษัท <span class="req">*</span></label><input type="text" id="org" placeholder="ชื่อองค์กร"></div></div>
-        <div class="row"><div class="field"><label>อีเมล <span class="req">*</span></label><input type="email" id="email" placeholder="your@email.com"></div><div class="field"><label>ประเทศ <span class="req">*</span></label><select id="country"><option value="">เลือกประเทศ</option><option value="TH" selected>Thailand / ประเทศไทย</option><option value="SG">Singapore</option><option value="MY">Malaysia</option><option value="ID">Indonesia</option><option value="VN">Vietnam</option><option value="AU">Australia</option><option value="JP">Japan</option><option value="KR">South Korea</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="OTHER">Other</option></select></div></div>
-        <div class="row full"><div class="field"><label>เบอร์โทร <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-500)">(สำหรับ SMS reminder)</span></label><input type="tel" id="phone" placeholder="+66 81 000 0000"></div></div>
-        <div class="fnav"><span></span><button class="btn btn-gold" onclick="goStep(2)">ถัดไป ›</button></div>
-      </div>
-
-      <!-- STEP 2 -->
-      <div class="fs" id="step2">
-        <div class="fs-title">ประเภทผู้เข้าร่วม</div>
-        <div class="fs-desc">เลือกประเภทของท่านเพื่อกำหนดสิทธิ์และราคา</div>
-        <div class="tier-grid">
-          <input type="radio" name="tier" id="t1" class="ti" value="member" onchange="onTier()">
-          <label for="t1" class="tc"><div class="tc-badge">สมาชิก TSPA</div><div class="tc-name">TSPA Member</div><div class="tc-who">สมาชิกสมาคมสปาไทย — รับสิทธิ์ครบทุกอย่าง</div><div class="tc-price free-p">FREE</div><div class="tc-incl">Congress + Workshops ทั้ง 3</div></label>
-
-          <input type="radio" name="tier" id="t2" class="ti" value="licensed" onchange="onTier()">
-          <label for="t2" class="tc"><div class="tc-name">Licensed Spa Manager</div><div class="tc-who">ผู้ถือใบอนุญาต Spa Manager</div><div class="tc-price free-p">FREE</div><div class="tc-incl">Congress Entry</div></label>
-
-          <input type="radio" name="tier" id="t3" class="ti" value="partner" onchange="onTier()">
-          <label for="t3" class="tc"><div class="tc-name">Association Partner</div><div class="tc-who">APSWC · ASWELL · GWI และสมาคมพันธมิตร</div><div class="tc-price free-p">FREE</div><div class="tc-incl">Congress Entry</div></label>
-
-          <input type="radio" name="tier" id="t4" class="ti" value="general" onchange="onTier()">
-          <label for="t4" class="tc"><div class="tc-name">General Public</div><div class="tc-who">บุคคลทั่วไป</div><div class="tc-price">฿1,500</div><div class="tc-incl">Congress Entry</div></label>
-        </div>
-
-        <div class="vbox" id="v-member">
-          <div class="vbox-lbl"><i data-lucide="shield-check" style="width:13px;height:13px"></i> ยืนยันสมาชิกภาพ</div>
-          <div class="field"><label>TSPA Membership Number <span class="req">*</span></label><input type="text" id="memberNo" placeholder="เช่น TSPA-2025-XXXX"></div>
-          <div class="hint">ทีมงาน TSPA จะ cross-check และส่ง confirmation ภายใน 1–2 วันทำการ</div>
-        </div>
-        <div class="vbox" id="v-licensed">
-          <div class="vbox-lbl"><i data-lucide="award" style="width:13px;height:13px"></i> ยืนยัน License</div>
-          <div class="field"><label>License Number <span class="req">*</span></label><input type="text" id="licenseNo" placeholder="หมายเลขใบอนุญาต Spa Manager"></div>
-          <div class="hint">หมายเลขใบอนุญาตจาก TSPA หรือกรมสนับสนุนบริการสุขภาพ (สบส.)</div>
-        </div>
-        <div class="vbox" id="v-partner">
-          <div class="vbox-lbl"><i data-lucide="handshake" style="width:13px;height:13px"></i> ยืนยัน Partner</div>
-          <div class="field"><label>สมาคม <span class="req">*</span></label><select id="partnerOrg"><option value="">เลือกสมาคม</option><option value="APSWC">APSWC — Asia Pacific Spa &amp; Wellness Coalition</option><option value="ASWELL">ASWELL — Australasian Wellness Association</option><option value="GWI">GWI — Global Wellness Institute</option><option value="IWPA">IWPA — International Wellness Professionals Association</option><option value="OTHER">Other Partner Association</option></select></div>
-          <div class="field" style="margin-top:10px"><label>Professional Email</label><input type="email" id="partnerEmail" placeholder="your@association.org"></div>
-        </div>
-        <div class="fnav"><button class="btn btn-outline" onclick="goStep(1)">‹ ย้อนกลับ</button><button class="btn btn-gold" onclick="goStep(3)">ถัดไป ›</button></div>
-      </div>
-
-      <!-- STEP 3 -->
-      <div class="fs" id="step3">
-        <div class="fs-title">Sessions &amp; Workshops</div>
-        <div class="fs-desc">เลือก sessions และ workshops ที่ต้องการเข้าร่วม</div>
-
-        <div style="margin-bottom:6px"><label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-700)">Congress Sessions</label></div>
-        <label class="all-btn" for="allSess"><input type="checkbox" id="allSess" onchange="toggleAll(this)" style="accent-color:var(--gold-d);width:16px;height:16px"> เข้าร่วมทุก Session ตลอดทั้งวัน</label>
-        <div class="sl">
-          <input type="checkbox" id="ss1" class="sci" value="10:15 Wellness Tourism"><label for="ss1" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">10:15</div><div class="stl">Wellness Tourism Initiative Trend 2026</div><div class="ssp2">Sunai Wachirawarakarn · TSPA &amp; GWI</div></div></label>
-          <input type="checkbox" id="ss2" class="sci" value="11:15 AI in Wellness"><label for="ss2" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">11:15</div><div class="stl">AI in Wellness</div><div class="ssp2">Samantha Dunn · ASWELL</div></div></label>
-          <input type="checkbox" id="ss3" class="sci" value="13:00 Thai TTM"><label for="ss3" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">13:00</div><div class="stl">Innovating Thai Traditional Medicine</div><div class="ssp2">Dr. Ketmanee + Dollaporn · Siriraj Hospital</div></div></label>
-          <input type="checkbox" id="ss4" class="sci" value="14:00 T-Beauty Panel"><label for="ss4" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">14:00</div><div class="stl">Luxury is the New Thai: T-Beauty Panel</div><div class="ssp2">HARNN · INGU · Praew · Minor Hotels · Siriraj</div></div></label>
-          <input type="checkbox" id="ss5" class="sci" value="15:00 Skin Longevity"><label for="ss5" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">15:00</div><div class="stl">Skin Longevity: What's Real, What's Hype?</div><div class="ssp2">Dr. Wanviput (VitalLife) · Samantha Dunn (ASWELL)</div></div></label>
-          <input type="checkbox" id="ss6" class="sci" value="16:00 Entrepreneurs Workshop"><label for="ss6" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">16:00</div><div class="stl">Wellness Entrepreneurs Workshop &amp; Pitch</div><div class="ssp2">Chiva-Som · Minor Hotels · VitalLife · BDMS · ASWELL</div></div></label>
-        </div>
-
-        <div style="margin:20px 0 8px;display:flex;justify-content:space-between;align-items:center">
-          <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-700)">Hands-On Workshops</label>
-          <span id="wsFreeBadge" style="display:none;font-size:12px;color:var(--success);font-weight:700;align-items:center;gap:4px"><i data-lucide="check-circle" style="width:12px;height:12px"></i> สมาชิก: ฟรีทั้ง 3</span>
-        </div>
-        <div class="mfree" id="memberFreeNote"><i data-lucide="gift" style="width:15px;height:15px;flex-shrink:0"></i> ในฐานะสมาชิก TSPA คุณได้รับสิทธิ์ Workshop ทั้ง 3 ฟรี</div>
-
-        <div class="wsg">
-          <input type="checkbox" id="w1" class="wsi" value="w1" onchange="calcTotal()"><label for="w1" class="wsl"><div class="cbox"></div><div class="wi"><div class="wt">Circadian Aromachology — Pillow &amp; Linen Mist</div><div class="wb">by iamingredient × THEMYTH</div><div class="wd">Aromachology + circadian rhythm → sleep-focused pillow &amp; linen mist formulation</div><div class="wp" id="wp1">1,000 ฿</div></div></label>
-          <input type="checkbox" id="w2" class="wsi" value="w2" onchange="calcTotal()"><label for="w2" class="wsl"><div class="cbox"></div><div class="wi"><div class="wt">Thai Elemental Hair Mist</div><div class="wb">by TCFF</div><div class="wd">Dhatu philosophy + Thai botanical knowledge → contemporary hair care formulation</div><div class="wp" id="wp2">1,000 ฿</div></div></label>
-          <input type="checkbox" id="w3" class="wsi" value="w3" onchange="calcTotal()"><label for="w3" class="wsl"><div class="cbox"></div><div class="wi"><div class="wt">Neuro Well-being Body Oil</div><div class="wb">by IplusQ</div><div class="wd">Neuro-cosmetics → body oil for emotional balance &amp; neurological well-being</div><div class="wp" id="wp3">1,000 ฿</div></div></label>
-        </div>
-
-        <div class="bnote" id="bundleNote">
-          <i data-lucide="zap" style="width:15px;height:15px;flex-shrink:0;color:var(--gold-d);margin-top:1px"></i>
-          <span><strong>Bundle Deal:</strong> เลือกทั้ง 3 Workshop ราคา <strong>2,000 ฿</strong> แทน 3,000 ฿ — ประหยัด 1,000 ฿ ทันที</span>
-        </div>
-
-        <div style="margin-top:18px"><div class="field"><label>ภาษาที่ต้องการรับข่าวสาร</label><div class="og" style="margin-top:5px"><input type="radio" name="lang" id="lth" class="oi" value="Thai"><label for="lth" class="ol">ภาษาไทย</label><input type="radio" name="lang" id="len" class="oi" value="English"><label for="len" class="ol">English</label><input type="radio" name="lang" id="lbt" class="oi" value="Both" checked><label for="lbt" class="ol">ทั้งสอง</label></div></div></div>
-
-        <div class="fnav"><button class="btn btn-outline" onclick="goStep(2)">‹ ย้อนกลับ</button><button class="btn btn-gold" onclick="goStep(4)">ถัดไป ›</button></div>
-      </div>
-
-      <!-- STEP 4 -->
-      <div class="fs" id="step4">
-        <div class="fs-title">ยืนยัน &amp; ชำระเงิน</div>
-        <div class="fs-desc">ตรวจสอบรายการและชำระเงิน (ถ้ามี) เพื่อยืนยันการลงทะเบียน</div>
-
-        <div class="obox">
-          <div class="otitle"><i data-lucide="receipt" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:4px"></i> Order Summary</div>
-          <div class="orow" id="or-congress"><span>Congress Access (6 Sessions)</span><span id="or-cp">—</span></div>
-          <div class="orow" id="or-w1" style="display:none"><span>Workshop 1: Circadian Aromachology</span><span id="or-w1p">—</span></div>
-          <div class="orow" id="or-w2" style="display:none"><span>Workshop 2: Thai Elemental Hair Mist</span><span id="or-w2p">—</span></div>
-          <div class="orow" id="or-w3" style="display:none"><span>Workshop 3: Neuro Well-being Body Oil</span><span id="or-w3p">—</span></div>
-          <div class="orow fr" id="or-bd" style="display:none"><span>Bundle Discount (3 Workshops)</span><span>- 1,000 ฿</span></div>
-          <hr class="odiv">
-          <div class="ototal"><span>Total</span><span class="amt" id="totalAmt">—</span></div>
-        </div>
-
-        <!-- PromptPay QR -->
-        <div class="paybox" id="payBox">
-          <div class="paytitle"><i data-lucide="qr-code" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:5px"></i> ชำระเงินผ่าน PromptPay</div>
-          <div class="qrwrap">
-            <div class="qrimg">
-              <!-- Replace with real PromptPay QR image -->
-              <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" width="130" height="130">
-                <rect width="130" height="130" fill="white"/>
-                <!-- Corner squares -->
-                <rect x="10" y="10" width="34" height="34" rx="2" fill="none" stroke="#1A2744" stroke-width="3"/><rect x="17" y="17" width="20" height="20" fill="#1A2744"/>
-                <rect x="86" y="10" width="34" height="34" rx="2" fill="none" stroke="#1A2744" stroke-width="3"/><rect x="93" y="17" width="20" height="20" fill="#1A2744"/>
-                <rect x="10" y="86" width="34" height="34" rx="2" fill="none" stroke="#1A2744" stroke-width="3"/><rect x="17" y="93" width="20" height="20" fill="#1A2744"/>
-                <!-- Center area -->
-                <rect x="52" y="52" width="26" height="26" rx="2" fill="none" stroke="#C9A96E" stroke-width="2"/>
-                <rect x="58" y="58" width="14" height="14" rx="1" fill="#C9A96E"/>
-                <!-- Data dots (simplified) -->
-                <rect x="52" y="10" width="6" height="6" fill="#1A2744"/><rect x="62" y="10" width="6" height="6" fill="#1A2744"/><rect x="72" y="10" width="6" height="6" fill="#1A2744"/>
-                <rect x="52" y="20" width="6" height="6" fill="#1A2744"/><rect x="72" y="20" width="6" height="6" fill="#1A2744"/>
-                <rect x="10" y="52" width="6" height="6" fill="#1A2744"/><rect x="20" y="52" width="6" height="6" fill="#1A2744"/>
-                <rect x="10" y="62" width="6" height="6" fill="#1A2744"/><rect x="30" y="62" width="6" height="6" fill="#1A2744"/>
-                <rect x="10" y="72" width="6" height="6" fill="#1A2744"/><rect x="20" y="72" width="6" height="6" fill="#1A2744"/>
-                <text x="65" y="115" text-anchor="middle" font-size="8" fill="#6F7B85" font-family="monospace">PromptPay · TSPA</text>
-              </svg>
-            </div>
-            <div class="qrsteps">
-              <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px">วิธีชำระเงิน</div>
-              <div class="qrrow"><div class="qrn">1</div><div>เปิดแอปธนาคารและเลือก "สแกน QR"</div></div>
-              <div class="qrrow"><div class="qrn">2</div><div>สแกน QR Code PromptPay ของสมาคมสปาไทย</div></div>
-              <div class="qrrow"><div class="qrn">3</div><div>กรอกจำนวน <strong id="amtRemind"></strong></div></div>
-              <div class="qrrow"><div class="qrn">4</div><div>แนบ Slip การโอนด้านล่าง</div></div>
-            </div>
-          </div>
-          <div style="margin-top:14px">
-            <div class="field"><label>แนบสลิปการโอนเงิน <span class="req">*</span></label><input type="file" id="slip" accept="image/*,.pdf" style="padding:8px"></div>
-            <div class="hint">รองรับ JPG, PNG, PDF — confirm หลังทีมงานตรวจสอบภายใน 1–2 วันทำการ</div>
-          </div>
-        </div>
-
-        <!-- Profile compact -->
-        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--ink-200)">
-          <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-700);margin-bottom:12px">Professional Profile</div>
-          <div class="row">
-            <div class="field"><label>Segment <span class="req">*</span></label><select id="segment"><option value="">เลือก...</option><option>Spa &amp; Wellness</option><option>Hotel / Resort Spa</option><option>Wellness Clinic</option><option>Beauty Brand</option><option>Supplier / Product</option><option>Education</option><option>Media</option><option>Investor</option><option>Government</option></select></div>
-            <div class="field"><label>Role Level <span class="req">*</span></label><select id="rolelevel"><option value="">เลือก...</option><option>Owner / Founder</option><option>Director</option><option>Manager</option><option>Therapist / Practitioner</option><option>Educator</option><option>Student</option></select></div>
-          </div>
-        </div>
-
-        <div class="optin"><input type="checkbox" id="optin" checked><label for="optin" class="optin-txt"><strong>รับข่าวสาร TSPA</strong> — ยินดีรับข้อมูลและโอกาสทางธุรกิจจากสมาคมสปาไทย</label></div>
-
-        <div class="fnav">
-          <button class="btn btn-outline" onclick="goStep(3)">‹ ย้อนกลับ</button>
-          <button class="btn btn-gold btn-lg" onclick="submitForm()"><i data-lucide="check" style="width:15px;height:15px"></i> ยืนยันการลงทะเบียน ›</button>
-        </div>
-      </div>
-    </div><!-- /formCard -->
-
-    <!-- SUCCESS -->
-    <div class="fc suc" id="successState">
-      <div class="suc-icon"><i data-lucide="check" style="width:26px;height:26px"></i></div>
-      <div class="suc-title">ลงทะเบียนสำเร็จ</div>
-      <div class="suc-desc" id="sucDesc">ขอบคุณสำหรับการลงทะเบียน เราจะส่ง e-badge และตารางเวลาไปยังอีเมลของคุณภายใน 24 ชั่วโมง</div>
-      <div class="suc-pending" id="sucPending"><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:5px"></i><strong>รอการยืนยัน:</strong> ทีมงาน TSPA จะตรวจสอบและส่ง confirmed e-badge ภายใน 1–2 วันทำการ</div>
-      <div class="suc-badge"><i data-lucide="calendar-check" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:5px"></i>26 June 2026 · QSNCC Bangkok</div>
-      <div style="margin-top:16px"><button class="btn btn-outline" onclick="resetForm()">ลงทะเบียนอีกท่าน</button></div>
-    </div>
+    <!-- Tally Form Embed -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <iframe
+      data-tally-src="https://tally.so/embed/VLN8Nl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="800"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="WSWC 2026 Registration Form"
+      style="border:none;background:transparent;min-height:600px">
+    </iframe>
   </div>
 </section>
 
