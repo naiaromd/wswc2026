@@ -1561,11 +1561,12 @@ function submitForm() {
     hear_from: hearFrom,
     interests: interests,
     marketing_consent: marketing,
-    promo_code: document.getElementById('promo-code').value
+    promo_code: document.getElementById('promo-code').value,
+    hear_from: hearFrom
   };
 
   // Submit via Web3Forms
-  fetch('https://formspree.io/f/meewenzk', {
+  fetch('https://script.google.com/macros/s/AKfycbzCwdqSW5PhQDlWjZbTtSX0mztafnDoX7k6G3_CXG5Nr8BhFDc0aQUF2GYegITaluAvfg/exec', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(payload)
