@@ -1294,7 +1294,7 @@ function updateVerifyBoxes() {
     'vip':'กรอก Invitation Code ที่ได้รับ',
     'sponsor':'กรอก Invitation Code ที่ได้รับ',
     'public':'ไม่ต้องยืนยันเพิ่มเติม — ดำเนินการต่อได้เลย',
-    'student':'ไม่ต้องยืนยันเพิ่มเติม — แต่อาจมีการขอหลักฐานนักศึกษาในวันงาน',
+    'student':'ไม่ต้องยืนยันเพิ่มเติม — แต่อาจมีการขอหลักฐานนักศึกษาในวันงาน'
   };
   const el = document.getElementById('step3-desc');
   if (el && desc[regType]) el.textContent = desc[regType];
@@ -1443,7 +1443,6 @@ function submitForm() {
   const badgeName = document.getElementById('badgename').value.trim() || (document.getElementById('fname').value.trim() + ' ' + document.getElementById('lname').value.trim());
 
   const payload = {
-    access_key: 'YOUR_WEB3FORMS_KEY', // Replace with your key from web3forms.com/free
     subject: `WSWC 2026 Registration — ${document.getElementById('fname').value} ${document.getElementById('lname').value}`,
     from_name: 'WSWC 2026 Registration',
     name: document.getElementById('fname').value + ' ' + document.getElementById('lname').value,
@@ -1461,12 +1460,11 @@ function submitForm() {
     industry: industry,
     interests: interests,
     marketing_consent: marketing,
-    promo_code: document.getElementById('promo-code').value,
-    botcheck: ''
+    promo_code: document.getElementById('promo-code').value
   };
 
   // Submit via Web3Forms
-  fetch('https://api.web3forms.com/submit', {
+  fetch('https://formspree.io/f/meewenzk', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(payload)
