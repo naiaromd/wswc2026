@@ -922,7 +922,7 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
         </div>
 
         <!-- General / Student - no verification box, just a note -->
-        <div class="field-note show" id="v-none" style="display:none">
+        <div class="field-note" id="v-none" style="display:none">
           <i data-lucide="info" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:4px"></i>
           ไม่ต้องยืนยันสิทธิ์เพิ่มเติม — ดำเนินการต่อได้เลย
         </div>
@@ -1368,7 +1368,7 @@ function updateVerifyBoxes() {
   const boxes = ['v-member','v-licensed','v-partner','v-media','v-vip','v-none'];
   boxes.forEach(id => {
     const el = document.getElementById(id);
-    if (el) { el.classList.remove('show'); el.style.display = ''; }
+    if (el) { el.classList.remove('show'); el.style.display = 'none'; }
   });
 
   const vip_types = ['vip','sponsor'];
@@ -1399,6 +1399,7 @@ function updateVerifyBoxes() {
 function showBox(id, isNone = false) {
   const el = document.getElementById(id);
   if (!el) return;
+  el.style.display = '';
   if (isNone) { el.style.display = 'block'; return; }
   el.classList.add('show');
 }
