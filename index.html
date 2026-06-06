@@ -92,6 +92,7 @@ body{font-family:'IBM Plex Sans Thai','IBM Plex Sans',sans-serif;background:var(
 .pc-verify{margin-top:10px;font-size:12px;color:var(--gold-d);background:var(--gold-bg);border-radius:var(--r);padding:7px 10px;display:flex;gap:6px;align-items:flex-start}
 
 /* ── WORKSHOP CARDS ── */
+.wsc-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r) var(--r) 0 0;display:block;margin-bottom:0}
 .ws-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:36px}
 .wsc{background:var(--paper);border:1px solid var(--ink-200);border-radius:var(--r);padding:26px;transition:box-shadow 140ms var(--ease)}
 .wsc:hover{box-shadow:var(--shadow)}
@@ -108,7 +109,8 @@ body{font-family:'IBM Plex Sans Thai','IBM Plex Sans',sans-serif;background:var(
 
 /* ── SESSION LIST ── */
 .sess-grid{display:flex;flex-direction:column;gap:12px;margin-top:36px}
-.sc{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.15);border-radius:var(--r);padding:20px 24px;display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:start;transition:background 120ms}
+.sess-thumb{width:72px;height:72px;object-fit:cover;border-radius:var(--r);flex-shrink:0}
+.sc{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.15);border-radius:var(--r);padding:16px 20px;display:grid;grid-template-columns:64px 70px 1fr;gap:14px;align-items:start;transition:background 120ms}
 .sc:hover{background:rgba(255,255,255,.07)}
 .st{font-size:16px;font-weight:700;color:var(--gold);line-height:1.3}
 .st small{display:block;font-size:11px;color:rgba(201,169,110,.55);font-weight:500;letter-spacing:.06em;margin-top:2px}
@@ -278,7 +280,7 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 .spk-card{background:var(--paper);border:1px solid var(--ink-200);border-radius:var(--r);padding:22px;transition:box-shadow 140ms var(--ease)}
 .spk-card:hover{box-shadow:var(--shadow)}
 .spk-hd{display:flex;align-items:center;gap:14px;margin-bottom:12px}
-.spk-photo{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold-d),var(--gold));display:flex;align-items:center;justify-content:center;color:var(--navy-d);font-size:16px;font-weight:700;flex-shrink:0;overflow:hidden}
+.spk-photo{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--gold-d),var(--gold));display:flex;align-items:center;justify-content:center;color:var(--navy-d);font-size:20px;font-weight:700;flex-shrink:0;overflow:hidden}
 .spk-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .spk-cn{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;font-weight:600;color:var(--navy);line-height:1.3}
 .spk-cr{font-size:12px;color:var(--gold-d);font-weight:600;margin-top:2px}
@@ -436,7 +438,10 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 <!-- NAV -->
 <nav class="nav">
   <a class="nav-logo" href="#">
-    <img src="wswc-clear.png" height="36" alt="WSWC 2026" style="height:36px;width:auto;object-fit:contain;">
+    <svg width="20" height="24" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2 C20 2 4 18 4 30 C4 39.5 11.2 46 20 46 C28.8 46 36 39.5 36 30 C36 18 20 2 20 2Z" fill="none" stroke="#C9A96E" stroke-width="2.5"/>
+      <path d="M20 12 C20 12 11 22 11 30 C11 35 15 38 20 38" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </svg>
   </a>
   <span class="nav-evt">26 June 2026 · QSNCC</span>
 </nav>
@@ -548,12 +553,12 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
     <h2 class="h2 h2-white">Session Highlights</h2>
     <p class="lead lead-white">6 sessions ตลอดทั้งวัน จากผู้เชี่ยวชาญระดับนานาชาติ</p>
     <div class="sess-grid">
-      <div class="sc"><div class="st">10:15<small>– 11:00</small></div><div><div class="stitle">Wellness Tourism Initiative Trend 2026</div><div class="sdesc">Key trends shaping wellness tourism in 2026 — regenerative travel, longevity retreats, authentic Thai experiences.</div><div class="ssp"><div class="spkc"><div class="av">SW</div> Sunai Wachirawarakarn · TSPA &amp; GWI</div></div></div></div>
-      <div class="sc"><div class="st">11:15<small>– 12:00</small></div><div><div class="stitle">AI in Wellness: How AI Will Transform Marketing, Operations &amp; Guest Experience</div><div class="sdesc">Practical overview of AI's impact — from personalisation to operations. Real-world examples from the global wellness industry.</div><div class="ssp"><div class="spkc"><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div>
-      <div class="sc"><div class="st">13:00<small>– 13:45</small></div><div><div class="stitle">Innovating Thai Traditional Medicine for the Global Perspective</div><div class="sdesc">Cutting-edge TTM research from Siriraj Hospital — bridging ancient knowledge and contemporary science.</div><div class="ssp"><div class="spkc"><div class="av">KJ</div> Dr. Ketmanee Jongjiamdee · Siriraj</div><div class="spkc"><div class="av">DM</div> Dollaporn Mamaethong · Siriraj</div></div></div></div>
-      <div class="sc"><div class="st">14:00<small>– 14:45</small></div><div><div class="stitle">Luxury is the New Thai: Can T-Beauty Win the Premium Skincare Market?</div><div class="sdesc">Leaders from Thailand's most respected luxury brands debate the real opportunities for T-Beauty on the global stage.</div><div class="ssp"><div class="spkc"><div class="av">SN</div> Sanchai · HARNN</div><div class="spkc"><div class="av">CK</div> Chayadhorn · INGU</div><div class="spkc"><div class="av">PS</div> Padcha · Praew</div><div class="spkc"><div class="av">PP</div> Premjit · Minor Hotels</div></div></div></div>
-      <div class="sc"><div class="st">15:00<small>– 15:45</small></div><div><div class="stitle">Skin Longevity: What's Real, What's Hype, and What's Next?</div><div class="sdesc">Clinical evidence and honest analysis on skin longevity — separating science from marketing.</div><div class="ssp"><div class="spkc"><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div>
-      <div class="sc"><div class="st">16:00<small>– 16:45</small></div><div><div class="stitle">Wellness Entrepreneurs Workshop with Pitch Practice</div><div class="sdesc">Practical business insights combined with a live pitch practice session by industry leaders.</div><div class="ssp"><div class="spkc"><div class="av">KR</div> Krod · Chiva-Som</div><div class="spkc"><div class="av">PP</div> Premjit · Minor Hotels</div><div class="spkc"><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><div class="av">NB</div> Dr. Natnaree · BDMS</div></div></div></div>
+      <div class="sc"><img src="sess1.png" class="sess-thumb" alt="Session"><div class="st">10:15<small>– 11:00</small></div><div><div class="stitle">Wellness Tourism Initiative Trend 2026</div><div class="sdesc">Key trends shaping wellness tourism in 2026 — regenerative travel, longevity retreats, authentic Thai experiences.</div><div class="ssp"><div class="spkc"><div class="av">SW</div> Sunai Wachirawarakarn · TSPA &amp; GWI</div></div></div></div>
+      <div class="sc"><img src="sess2.png" class="sess-thumb" alt="Session"><div class="st">11:15<small>– 12:00</small></div><div><div class="stitle">AI in Wellness: How AI Will Transform Marketing, Operations &amp; Guest Experience</div><div class="sdesc">Practical overview of AI's impact — from personalisation to operations. Real-world examples from the global wellness industry.</div><div class="ssp"><div class="spkc"><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div>
+      <div class="sc"><img src="sess3.png" class="sess-thumb" alt="Session"><div class="st">13:00<small>– 13:45</small></div><div><div class="stitle">Innovating Thai Traditional Medicine for the Global Perspective</div><div class="sdesc">Cutting-edge TTM research from Siriraj Hospital — bridging ancient knowledge and contemporary science.</div><div class="ssp"><div class="spkc"><div class="av">KJ</div> Dr. Ketmanee Jongjiamdee · Siriraj</div><div class="spkc"><div class="av">DM</div> Dollaporn Mamaethong · Siriraj</div></div></div></div>
+      <div class="sc"><img src="sess4.png" class="sess-thumb" alt="Session"><div class="st">14:00<small>– 14:45</small></div><div><div class="stitle">Luxury is the New Thai: Can T-Beauty Win the Premium Skincare Market?</div><div class="sdesc">Leaders from Thailand's most respected luxury brands debate the real opportunities for T-Beauty on the global stage.</div><div class="ssp"><div class="spkc"><div class="av">SN</div> Sanchai · HARNN</div><div class="spkc"><div class="av">CK</div> Chayadhorn · INGU</div><div class="spkc"><div class="av">PS</div> Padcha · Praew</div><div class="spkc"><div class="av">PP</div> Premjit · Minor Hotels</div></div></div></div>
+      <div class="sc"><img src="sess5.png" class="sess-thumb" alt="Session"><div class="st">15:00<small>– 15:45</small></div><div><div class="stitle">Skin Longevity: What's Real, What's Hype, and What's Next?</div><div class="sdesc">Clinical evidence and honest analysis on skin longevity — separating science from marketing.</div><div class="ssp"><div class="spkc"><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div>
+      <div class="sc"><img src="sess6.png" class="sess-thumb" alt="Session"><div class="st">16:00<small>– 16:45</small></div><div><div class="stitle">Wellness Entrepreneurs Workshop with Pitch Practice</div><div class="sdesc">Practical business insights combined with a live pitch practice session by industry leaders.</div><div class="ssp"><div class="spkc"><div class="av">KR</div> Krod · Chiva-Som</div><div class="spkc"><div class="av">PP</div> Premjit · Minor Hotels</div><div class="spkc"><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><div class="av">NB</div> Dr. Natnaree · BDMS</div></div></div></div>
     </div>
   </div>
 </section>
@@ -565,9 +570,9 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
     <h2 class="h2">Hands-On Innovation</h2>
     <p class="lead">3 exclusive workshops — สร้างผลิตภัณฑ์ wellness จริงกับ ingredient specialists ชั้นนำของไทย</p>
     <div class="ws-grid">
-      <div class="wsc"><div class="wsc-num"><i data-lucide="moon" style="width:13px;height:13px"></i> Workshop 1</div><div class="wsc-title">Circadian Aromachology<br>Pillow &amp; Linen Mist</div><div class="wsc-by">by iamingredient × THEMYTH</div><div class="wsc-desc">Science of aromachology aligned with the body's circadian rhythm. Create a sleep-focused pillow &amp; linen mist through evidence-based scent formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div>
-      <div class="wsc"><div class="wsc-num"><i data-lucide="leaf" style="width:13px;height:13px"></i> Workshop 2</div><div class="wsc-title">Thai Elemental Hair Mist</div><div class="wsc-by">by TCFF</div><div class="wsc-desc">Rooted in Thai Elemental Medicine and Dhatu philosophy — translate ancient Thai botanical wisdom into a contemporary, effective hair care formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div>
-      <div class="wsc"><div class="wsc-num"><i data-lucide="brain" style="width:13px;height:13px"></i> Workshop 3</div><div class="wsc-title">Neuro Well-being Body Oil</div><div class="wsc-by">by IplusQ</div><div class="wsc-desc">At the frontier of neuro-cosmetics — formulate a body oil designed to support emotional balance, stress response and neurological well-being.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div>
+      <div class="wsc"><img src="ws1.png" class="wsc-img" alt="Workshop 1"><div style="padding:18px"><div class="wsc-num"><i data-lucide="moon" style="width:13px;height:13px"></i> Workshop 1</div><div class="wsc-title">Circadian Aromachology<br>Pillow &amp; Linen Mist</div><div class="wsc-by">by iamingredient × THEMYTH</div><div class="wsc-desc">Science of aromachology aligned with the body's circadian rhythm. Create a sleep-focused pillow &amp; linen mist through evidence-based scent formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
+      <div class="wsc"><img src="ws2.png" class="wsc-img" alt="Workshop 2"><div style="padding:18px"><div class="wsc-num"><i data-lucide="leaf" style="width:13px;height:13px"></i> Workshop 2</div><div class="wsc-title">Thai Elemental Hair Mist</div><div class="wsc-by">by TCFF</div><div class="wsc-desc">Rooted in Thai Elemental Medicine and Dhatu philosophy — translate ancient Thai botanical wisdom into a contemporary, effective hair care formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
+      <div class="wsc"><img src="ws3.png" class="wsc-img" alt="Workshop 3"><div style="padding:18px"><div class="wsc-num"><i data-lucide="brain" style="width:13px;height:13px"></i> Workshop 3</div><div class="wsc-title">Neuro Well-being Body Oil</div><div class="wsc-by">by IplusQ</div><div class="wsc-desc">At the frontier of neuro-cosmetics — formulate a body oil designed to support emotional balance, stress response and neurological well-being.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
     </div>
     <div class="bundle-bar">
       <div><div class="bundle-bar-left"><i data-lucide="package" style="width:15px;height:15px;display:inline;vertical-align:middle;margin-right:6px"></i>Bundle: ทั้ง 3 Workshops</div><div class="bundle-bar-save">ประหยัด 1,000 ฿ เมื่อเลือกครบ 3 Workshop</div></div>
@@ -705,10 +710,7 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
         </div>
         <div class="row">
           <div class="field"><label>โทรศัพท์ / LINE / WhatsApp <span class="req">*</span></label><input type="tel" id="phone" placeholder="+66 81 234 5678"></div>
-          <div class="field"><label>Dietary Restriction</label>
-            <select id="dietary"><option value="">ไม่มี / None</option><option value="veg">Vegetarian</option><option value="vegan">Vegan</option><option value="halal">Halal</option><option value="gluten">Gluten-free</option><option value="other">Other (please note in description)</option></select>
           </div>
-        </div>
         <div class="row full">
           <div class="field"><label>Accessibility Need</label><input type="text" id="access" placeholder="เช่น Wheelchair access, Sign language interpreter (ถ้ามี)"></div>
         </div>
@@ -1452,7 +1454,6 @@ function submitForm() {
     country: document.getElementById('country').value,
     email: document.getElementById('email').value,
     phone: document.getElementById('phone').value,
-    dietary: document.getElementById('dietary').value,
     accessibility: document.getElementById('access').value,
     registration_type: regType,
     workshops: workshops,
