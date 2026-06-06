@@ -1564,14 +1564,20 @@ function submitForm() {
   };
 
   // Submit via Web3Forms
-  // Send to Google Sheets (no-cors to bypass CORS redirect)
+  // Send to Google Sheets via form-urlencoded (bypasses CORS)
+  const params = new URLSearchParams({
+    name: payload.name, position: payload.position,
+    organization: payload.organization, country: payload.country,
+    email: payload.email, phone: payload.phone,
+    type: payload.registration_type, workshops: payload.workshops,
+    total: payload.total_amount, industry: payload.industry,
+    hear_from: payload.hear_from, promo: payload.promo_code
+  });
   fetch('https://script.google.com/macros/s/AKfycbyidbSs6HvGO_rNda6Lmzy0Wuh4luIEWgBkZFGofW3PMwU9efZF2Gi6D-gBxLCOvYukwA/exec', {
     method: 'POST',
     mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
+    body: params
   }).catch(err => console.log('Sheet error:', err));
-  // Show success immediately (no-cors doesn't return readable response)
   showSuccess();
 }
 
