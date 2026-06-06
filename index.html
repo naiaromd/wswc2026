@@ -1583,36 +1583,6 @@ function submitForm() {
   const accessCode = document.getElementById('member-code')?.value ||
     document.getElementById('partner-code')?.value ||
     document.getElementById('inv-code')?.value || '';
-  const params = new URLSearchParams({
-    fname: document.getElementById('fname').value,
-    lname: document.getElementById('lname').value,
-    badgename: document.getElementById('badgename').value,
-    position: payload.position,
-    org: payload.organization,
-    country: payload.country,
-    email: payload.email,
-    phone: payload.phone,
-    access: document.getElementById('access').value,
-    regtype: payload.registration_type,
-    access_code: accessCode,
-    license_no: document.getElementById('license-no')?.value || '',
-    media_outlet: document.getElementById('media-outlet')?.value || '',
-    media_type: document.getElementById('media-type')?.value || '',
-    workshops: payload.workshops,
-    total: payload.total_amount,
-    industry: payload.industry,
-    industry_other: document.getElementById('ind-other-text')?.value || '',
-    interests: ['int-wt','int-ai','int-ttm','int-tbeauty','int-skin','int-biz','int-ws','int-partner'].filter(id=>document.getElementById(id)?.checked).map(id=>id.replace('int-','')).join(', '),
-    hear_from: payload.hear_from,
-    pay_method: document.getElementById('pay-method')?.value || '',
-    promo: payload.promo_code,
-    marketing: document.querySelector('input[name="marketing"]:checked')?.value || 'no'
-  });
-  fetch('https://script.google.com/macros/s/AKfycbwURG4His4Sc4Gf6UkjhVeQ01-p41EG_LH7YZ_2h_zG4do9lPczIFH-u-vqe4fH6CJdnA/exec', {
-    method: 'POST',
-    mode: 'no-cors',
-    body: params
-  }).catch(err => console.log('Sheet error:', err));
   showSuccess();
 }
 
@@ -1674,5 +1644,20 @@ function toggleOther(field) {
 calcPrice();
 </script>
 
+<iframe name="tspa-frame" style="display:none"></iframe>
+<form id="tspa-form" method="POST" action="https://script.google.com/macros/s/AKfycbwURG4His4Sc4Gf6UkjhVeQ01-p41EG_LH7YZ_2h_zG4do9lPczIFH-u-vqe4fH6CJdnA/exec" target="tspa-frame" style="display:none">
+  <input type="hidden" name="fname"><input type="hidden" name="lname">
+  <input type="hidden" name="badgename"><input type="hidden" name="position">
+  <input type="hidden" name="org"><input type="hidden" name="country">
+  <input type="hidden" name="email"><input type="hidden" name="phone">
+  <input type="hidden" name="access"><input type="hidden" name="regtype">
+  <input type="hidden" name="access_code"><input type="hidden" name="license_no">
+  <input type="hidden" name="media_outlet"><input type="hidden" name="media_type">
+  <input type="hidden" name="workshops"><input type="hidden" name="total">
+  <input type="hidden" name="industry"><input type="hidden" name="industry_other">
+  <input type="hidden" name="interests"><input type="hidden" name="hear_from">
+  <input type="hidden" name="pay_method"><input type="hidden" name="promo">
+  <input type="hidden" name="marketing">
+</form>
 </body>
 </html>
