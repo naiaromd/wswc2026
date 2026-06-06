@@ -450,7 +450,7 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 <section class="hero">
   <!-- WSWC Banner Logo -->
   <div class="hero-logo" style="margin-bottom:24px">
-    <img src="wswc.png" alt="World Spa & Well-being Congress 2026" style="max-width:560px;width:90%;height:auto;">
+    <img src="wswc-clear.png" alt="World Spa & Well-being Congress 2026" style="max-width:560px;width:90%;height:auto;">
   </div>
   <div class="hero-chips">
     <div class="hchip"><i data-lucide="calendar" style="width:13px;height:13px"></i> 26 มิถุนายน 2569 · 26 June 2026</div>
@@ -705,6 +705,9 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
               <option value="AE">UAE</option><option value="IN">India</option>
               <option value="other">Other</option>
             </select>
+            <div id="country-specify" style="display:none;margin-top:6px">
+              <input type="text" id="country-other" placeholder="ระบุประเทศ" style="width:100%;border:1px solid var(--ink-200);border-radius:var(--r);padding:10px 13px;font-family:inherit;font-size:15px">
+            </div>
           </div>
           <div class="field"><label>Email <span class="req">*</span></label><input type="email" id="email" placeholder="your@email.com"></div>
         </div>
@@ -809,15 +812,11 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 
         <!-- TSPA Member -->
         <div class="vbox" id="v-member">
-          <div class="vbox-title"><i data-lucide="shield-check" style="width:14px;height:14px"></i> TSPA Member Verification</div>
-          <div class="row">
-            <div class="field"><label>ชื่อสปา / บริษัท <span class="req">*</span></label><input type="text" id="member-spa"></div>
-            <div class="field"><label>Membership Number <span class="req">*</span></label><input type="text" id="member-no" placeholder="TSPA-XXXX"></div>
-          </div>
+          <div class="vbox-title"><i data-lucide="shield-check" style="width:14px;height:14px"></i> TSPA Member — Access Code</div>
           <div class="row full">
-            <div class="field"><label>Contact Person</label><input type="text" id="member-contact" placeholder="ชื่อผู้ประสานงาน (ถ้าต่างจากผู้สมัคร)"></div>
+            <div class="field"><label>Access Code <span class="req">*</span></label><input type="text" id="member-code" placeholder="MWSWC2026" style="text-transform:uppercase"></div>
           </div>
-          <div class="hint" style="margin-top:4px">ทีมงาน TSPA จะ cross-check ภายใน 1–2 วันทำการ และส่ง e-badge ทาง email</div>
+          <div class="hint" style="margin-top:4px">กรอก Code ที่ได้รับจาก TSPA — ทีมงานจะยืนยันภายใน 1–2 วันทำการ</div>
         </div>
 
         <!-- Licensed Spa Manager -->
@@ -829,21 +828,22 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
               <select id="license-by"><option value="">— เลือก —</option><option value="TSPA">Thai Spa Association (TSPA)</option><option value="DHSS">Department of Health Service Support (สบส.)</option><option value="other">Other</option></select>
             </div>
           </div>
-          <div class="hint">ทีมงาน TSPA จะยืนยันภายใน 1–2 วันทำการ</div>
+          <div class="row full" style="margin-top:10px">
+            <div class="field">
+              <label>หรือ Upload Certificate <span style="font-size:11px;color:var(--ink-500);font-weight:400;text-transform:none">(PDF, JPG, PNG)</span></label>
+              <input type="file" id="license-cert" accept=".pdf,.jpg,.jpeg,.png" style="padding:8px">
+              <div class="hint">อัปโหลดใบอนุญาต / Certificate — ทีมงานจะยืนยันภายใน 1–2 วันทำการ</div>
+            </div>
+          </div>
         </div>
 
         <!-- Association Partner -->
         <div class="vbox" id="v-partner">
-          <div class="vbox-title"><i data-lucide="handshake" style="width:14px;height:14px"></i> Association Partner Verification</div>
-          <div class="row">
-            <div class="field"><label>สมาคม / Association <span class="req">*</span></label>
-              <select id="partner-assoc"><option value="">— เลือกสมาคม —</option><option value="APSWC">APSWC — Asia Pacific Spa & Wellness Coalition</option><option value="ASWELL">ASWELL — Australasian Wellness Association</option><option value="GWI">GWI — Global Wellness Institute</option><option value="IWBI">IWBI — International WELL Building Institute</option><option value="other">Other Wellness Association</option></select>
-            </div>
-            <div class="field"><label>Professional Email <span class="req">*</span></label><input type="email" id="partner-email" placeholder="yourname@association.org"></div>
-          </div>
+          <div class="vbox-title"><i data-lucide="handshake" style="width:14px;height:14px"></i> Alliance Partner — Access Code</div>
           <div class="row full">
-            <div class="field"><label>Position / Role in Association</label><input type="text" id="partner-role" placeholder="เช่น Board Member, Chapter Director"></div>
+            <div class="field"><label>Access Code <span class="req">*</span></label><input type="text" id="partner-code" placeholder="AWSWC2026" style="text-transform:uppercase"></div>
           </div>
+          <div class="hint" style="margin-top:4px">กรอก Code ที่ได้รับจากสมาคม / Alliance ของคุณ</div>
         </div>
 
         <!-- Media -->
@@ -852,8 +852,11 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
           <div class="row">
             <div class="field"><label>สื่อ / Media Outlet <span class="req">*</span></label><input type="text" id="media-outlet" placeholder="เช่น Vogue Thailand, LINE TV, Podcast Name"></div>
             <div class="field"><label>Media Type <span class="req">*</span></label>
-              <select id="media-type"><option value="">— เลือก —</option><option value="print">Print / Magazine</option><option value="online">Online Media / Website</option><option value="tv">TV / Video</option><option value="social">Social Media / Influencer</option><option value="podcast">Podcast / Audio</option><option value="other">Other</option></select>
+              <select id="media-type" onchange="toggleOther('media-type')"><option value="">— เลือก —</option><option value="print">Print / Magazine</option><option value="online">Online Media / Website</option><option value="tv">TV / Video</option><option value="social">Social Media / Influencer</option><option value="podcast">Podcast / Audio</option><option value="other">Other</option></select>
             </div>
+          </div>
+          <div id="media-type-specify" style="display:none;margin-top:8px">
+            <div class="field"><label>ระบุประเภทสื่อ</label><input type="text" id="media-type-other" placeholder="ระบุประเภทสื่อ"></div>
           </div>
         </div>
 
@@ -976,7 +979,10 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
             <label><input type="radio" name="industry" value="gov" class="rti" id="ind-gov"><div class="rtc" style="padding:10px 12px"><div class="rtc-name" style="font-size:13px">Government / Association</div></div></label>
             <label><input type="radio" name="industry" value="invest" class="rti" id="ind-invest"><div class="rtc" style="padding:10px 12px"><div class="rtc-name" style="font-size:13px">Investor / Biz Dev</div></div></label>
             <label><input type="radio" name="industry" value="media" class="rti" id="ind-media"><div class="rtc" style="padding:10px 12px"><div class="rtc-name" style="font-size:13px">Media / Content</div></div></label>
-            <label><input type="radio" name="industry" value="other-ind" class="rti" id="ind-other"><div class="rtc" style="padding:10px 12px"><div class="rtc-name" style="font-size:13px">Other</div></div></label>
+            <label><input type="radio" name="industry" value="other-ind" class="rti" id="ind-other" onchange="toggleOther('ind')"><div class="rtc" style="padding:10px 12px"><div class="rtc-name" style="font-size:13px">Other</div></div></label>
+          </div>
+          <div id="ind-specify" style="display:none;margin-top:8px">
+            <div class="field"><label>ระบุประเภทธุรกิจ</label><input type="text" id="ind-other-text" placeholder="ระบุประเภทธุรกิจของคุณ"></div>
           </div>
           <div id="ind-err" class="err-msg">กรุณาเลือกประเภทธุรกิจ</div>
         </div>
@@ -992,6 +998,27 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
             <label><input type="checkbox" class="ici" id="int-biz"><div class="icl"><i data-lucide="trending-up" style="width:13px;height:13px;flex-shrink:0"></i>Entrepreneurship / Pitch</div></label>
             <label><input type="checkbox" class="ici" id="int-ws"><div class="icl"><i data-lucide="flask-conical" style="width:13px;height:13px;flex-shrink:0"></i>Workshop / Formulation</div></label>
             <label><input type="checkbox" class="ici" id="int-partner"><div class="icl"><i data-lucide="handshake" style="width:13px;height:13px;flex-shrink:0"></i>Partnership / Sponsorship</div></label>
+          </div>
+        </div>
+
+        <div class="row full" style="margin-top:20px">
+          <div class="field">
+            <label>รู้จักงานนี้จากช่องทางไหน <span class="req">*</span></label>
+            <select id="hear-from" onchange="toggleOther('hear-from')">
+              <option value="">— เลือก —</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="line">LINE / LINE OA</option>
+              <option value="email">Email จาก TSPA</option>
+              <option value="friend">เพื่อน / Colleague แนะนำ</option>
+              <option value="tspa-web">TSPA Website</option>
+              <option value="google">Google / Search</option>
+              <option value="cosmoprof">CosmoprofCBE ASEAN</option>
+              <option value="other">อื่นๆ</option>
+            </select>
+            <div id="hear-from-specify" style="display:none;margin-top:6px">
+              <input type="text" id="hear-from-other" placeholder="ระบุช่องทาง" style="width:100%;border:1px solid var(--ink-200);border-radius:var(--r);padding:10px 13px;font-family:inherit;font-size:15px">
+            </div>
           </div>
         </div>
 
@@ -1156,13 +1183,11 @@ let regType = '';
 let totalAmt = 0;
 
 const PROMO_CODES = {
-  'TSPA-MEMBER': { type: 'info', msg: 'รหัส TSPA Member — กรุณาเลือกประเภท TSPA Member ด้านบน' },
-  'GWI-GUEST': { type: 'vip', msg: 'GWI Guest Access confirmed' },
-  'ASWELL-PARTNER': { type: 'vip', msg: 'ASWELL Partner Access confirmed' },
-  'MEDIA2026': { type: 'media', msg: 'Media Access confirmed' },
-  'VIP-TSPA': { type: 'vip', msg: 'VIP Access confirmed' },
-  'SPONSOR-GUEST': { type: 'sponsor', msg: 'Sponsor Guest Access confirmed' },
-  'STUDENT50': { type: 'disc', msg: 'Student discount applied — 50% off Congress' },
+  'MWSWC2026':   { type: 'member',  msg: '✓ TSPA Member Code confirmed' },
+  'AWSWC2026':   { type: 'partner', msg: '✓ Alliance Member Code confirmed' },
+  'VIPWSWC2026': { type: 'vip',     msg: '✓ VIP Access confirmed' },
+  'MEDIA2026':   { type: 'media',   msg: '✓ Media Access confirmed — Free All' },
+  'SWSWC2026':   { type: 'sponsor', msg: '✓ Sponsor Access confirmed' },
 };
 
 // ── Step navigation ──────────────────────────────────────
@@ -1216,8 +1241,8 @@ function validateStep(step, next) {
 
   if (step === 3) {
     if (regType === 'member') {
-      if (!document.getElementById('member-no').value.trim() || !document.getElementById('member-spa').value.trim()) {
-        alert('กรุณากรอก Membership Number และชื่อสปา'); return false;
+      if (!document.getElementById('member-code').value.trim()) {
+        alert('กรุณากรอก Access Code สำหรับ TSPA Member'); return false;
       }
     }
     if (regType === 'licensed') {
@@ -1226,8 +1251,8 @@ function validateStep(step, next) {
       }
     }
     if (regType === 'partner') {
-      if (!document.getElementById('partner-assoc').value || !document.getElementById('partner-email').value.trim()) {
-        alert('กรุณาเลือกสมาคมและกรอก Professional Email'); return false;
+      if (!document.getElementById('partner-code').value.trim()) {
+        alert('กรุณากรอก Access Code สำหรับ Alliance Partner'); return false;
       }
     }
     if (regType === 'media') {
@@ -1246,6 +1271,9 @@ function validateStep(step, next) {
       alert('กรุณาเลือกประเภทธุรกิจ'); return false;
     }
     document.getElementById('ind-err').classList.remove('show');
+    if (!document.getElementById('hear-from').value) {
+      alert('กรุณาเลือกช่องทางที่รู้จักงานนี้'); return false;
+    }
   }
 
   if (step === 6) {
@@ -1439,6 +1467,11 @@ function submitForm() {
 
   const interests = ['int-wt','int-ai','int-ttm','int-tbeauty','int-skin','int-biz','int-ws','int-partner']
     .map(id => document.getElementById(id)?.checked ? id.replace('int-','') : null).filter(Boolean).join(', ');
+  const hearFrom = document.getElementById('hear-from')?.value === 'other'
+    ? document.getElementById('hear-from-other')?.value
+    : document.getElementById('hear-from')?.value;
+  const indOther = document.querySelector('input[name="industry"]:checked')?.value === 'other-ind'
+    ? document.getElementById('ind-other-text')?.value : null;
 
   const industry = document.querySelector('input[name="industry"]:checked')?.value || '';
   const marketing = document.querySelector('input[name="marketing"]:checked')?.value || 'no';
@@ -1458,7 +1491,8 @@ function submitForm() {
     registration_type: regType,
     workshops: workshops,
     total_amount: totalAmt === 0 ? 'FREE' : totalAmt.toLocaleString() + ' THB',
-    industry: industry,
+    industry: indOther ? ('Other: ' + indOther) : industry,
+    hear_from: hearFrom,
     interests: interests,
     marketing_consent: marketing,
     promo_code: document.getElementById('promo-code').value
@@ -1519,6 +1553,26 @@ function resetForm() {
   document.querySelectorAll('select').forEach(el => el.selectedIndex = 0);
   regType = ''; totalAmt = 0; cur = 1;
   goStep(1);
+}
+
+// ── Other → Specify toggle ──────────────────────────────────
+function toggleOther(field) {
+  const map = {
+    'country':    { el: 'country',    specId: 'country-specify',    val: 'other' },
+    'media-type': { el: 'media-type', specId: 'media-type-specify', val: 'other' },
+    'hear-from':  { el: 'hear-from',  specId: 'hear-from-specify',  val: 'other' },
+    'ind':        { el: null,         specId: 'ind-specify',         val: 'other-ind', isRadio: true },
+  };
+  const cfg = map[field];
+  if (!cfg) return;
+  let val;
+  if (cfg.isRadio) {
+    val = document.querySelector('input[name="industry"]:checked')?.value || '';
+  } else {
+    val = document.getElementById(cfg.el)?.value || '';
+  }
+  const spec = document.getElementById(cfg.specId);
+  if (spec) spec.style.display = (val === cfg.val) ? 'block' : 'none';
 }
 
 // Init
