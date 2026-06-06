@@ -874,11 +874,9 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
         <!-- Licensed Spa Manager -->
         <div class="vbox" id="v-licensed">
           <div class="vbox-title"><i data-lucide="award" style="width:14px;height:14px"></i> Licensed Spa Manager Verification</div>
-          <div class="row">
+          <div class="row full">
             <div class="field"><label>หมายเลขใบอนุญาต (License Number) <span class="req">*</span></label><input type="text" id="license-no" placeholder="SPA-XXXX / สบส-XXXX"></div>
-            <div class="field"><label>ออกใบอนุญาตโดย <span class="req">*</span></label>
-              <select id="license-by"><option value="">— เลือก —</option><option value="TSPA">Thai Spa Association (TSPA)</option><option value="DHSS">Department of Health Service Support (สบส.)</option><option value="other">Other</option></select>
-            </div>
+
           </div>
           <div class="row full" style="margin-top:10px">
             <div class="field">
@@ -1324,8 +1322,8 @@ function validateStep(step, next) {
       }
     }
     if (regType === 'licensed') {
-      if (!document.getElementById('license-no').value.trim() || !document.getElementById('license-by').value) {
-        alert('กรุณากรอก License Number และหน่วยงานที่ออกใบอนุญาต'); return false;
+      if (!document.getElementById('license-no').value.trim()) {
+        alert('กรุณากรอก License Number'); return false;
       }
     }
   }
@@ -1566,7 +1564,7 @@ function submitForm() {
   };
 
   // Submit via Web3Forms
-  fetch('https://script.google.com/macros/s/AKfycbzCwdqSW5PhQDlWjZbTtSX0mztafnDoX7k6G3_CXG5Nr8BhFDc0aQUF2GYegITaluAvfg/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbyidbSs6HvGO_rNda6Lmzy0Wuh4luIEWgBkZFGofW3PMwU9efZF2Gi6D-gBxLCOvYukwA/exec', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(payload)
