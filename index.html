@@ -117,7 +117,7 @@ body{font-family:'IBM Plex Sans Thai','IBM Plex Sans',sans-serif;background:var(
 /* ── WORKSHOP CARDS ── */
 .ws-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:36px;align-items:stretch}
 .wsc{background:var(--paper);border:1px solid var(--ink-200);border-radius:var(--r);overflow:hidden;transition:box-shadow 140ms var(--ease);display:flex;flex-direction:column}.wsc-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;display:block}.wsc-body{padding:24px 26px;flex:1;display:flex;flex-direction:column}
-.wsc:hover{box-shadow:var(--shadow)}
+.wwtag{display:flex;align-items:center;margin-bottom:4px}.wsc:hover{box-shadow:var(--shadow)}
 .wsc-num{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .wsc-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600;margin-bottom:4px;line-height:1.3;color:var(--navy)}
 .wsc-by{font-size:13px;color:var(--gold-d);font-weight:600;margin-bottom:10px}
@@ -137,9 +137,9 @@ body{font-family:'IBM Plex Sans Thai','IBM Plex Sans',sans-serif;background:var(
 .st small{display:inline;font-size:11px;color:rgba(201,169,110,.55);margin-left:2px;font-weight:500;letter-spacing:.06em;margin-top:2px}
 .stitle{font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:4px;line-height:1.3;color:var(--navy)}
 .sdesc{font-size:13px;color:var(--ink-700);line-height:1.6;margin-bottom:10px}
-.ssp{display:flex;flex-wrap:wrap;gap:6px}
+.ssp{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .spkc{background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.2);border-radius:999px;padding:3px 11px 3px 4px;font-size:12px;color:var(--gold-l);display:inline-flex;align-items:center;gap:5px}
-.av{width:20px;height:20px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--gold-l);flex-shrink:0}
+.av{display:none}
 
 /* ── CANCELLATION POLICY ── */
 .policy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:32px}
@@ -366,10 +366,10 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
         <div class="pc-who">สมาชิกสมาคมสปาไทย — สิทธิ์สูงสุด</div>
         <div class="pc-price free">FREE</div>
         <div class="pc-incl">
-          <div class="pc-item"><i data-lucide="check" class="check" style="width:14px;height:14px"></i> Congress Access (6 Sessions)</div>
-          <div class="pc-item"><i data-lucide="check" class="check" style="width:14px;height:14px"></i> Workshops ทั้ง 3 ฟรี</div>
+          <div class="pc-item"><i data-lucide="check" class="check" style="width:14px;height:14px"></i> Congress Access <strong>ไม่จำกัด</strong></div>
+          <div class="pc-item"><i data-lucide="check" class="check" style="width:14px;height:14px"></i> <span style="white-space:nowrap">Workshop ฟรี <strong>2 ที่นั่ง</strong> / 3 Workshops</span></div>
+          <div class="pc-item"><i data-lucide="plus" style="width:14px;height:14px;color:#6F7B85"></i> <span style="color:#6F7B85;white-space:nowrap">ที่นั่งเพิ่มเติม 1,000 ฿ / ที่นั่ง</span></div>
           <div class="pc-item"><i data-lucide="check" class="check" style="width:14px;height:14px"></i> Networking & Exhibition</div>
-          <div class="pc-item"><i data-lucide="check" class="check" style="width:14px;height:14px"></i> Priority Seating</div>
         </div>
         <div class="pc-verify"><i data-lucide="info" style="width:13px;height:13px;flex-shrink:0;margin-top:1px;color:var(--gold-d)"></i><span>ทีมงาน TSPA cross-check ภายใน 1–2 วันทำการ</span></div>
       </div>
@@ -440,12 +440,12 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
     <h2 class="h2 h2-white">Session Highlights</h2>
     <p class="lead lead-white">6 sessions ตลอดทั้งวัน จากผู้เชี่ยวชาญระดับนานาชาติ</p>
     <div class="sess-grid">
-      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess1.png" alt="Session 1" alt="Session 1" alt="Session 1"><div class="sc-body"><div class="st">10:15<small>– 11:00</small></div><div><div class="stitle">Wellness Tourism Initiative Trend 2026</div><div class="sdesc">Key trends shaping wellness tourism in 2026 — regenerative travel, longevity retreats, authentic Thai experiences.</div><div class="ssp"><div class="spkc"><div class="av">SW</div> Sunai Wachirawarakarn · TSPA &amp; GWI</div></div></div></div></div>
-      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess2.png" alt="Session 2" alt="Session 2" alt="Session 2"><div class="sc-body"><div class="st">11:15<small>– 12:00</small></div><div><div class="stitle">AI in Wellness: How AI Will Transform Marketing, Operations &amp; Guest Experience</div><div class="sdesc">Practical overview of AI's impact — from personalisation to operations. Real-world examples from the global wellness industry.</div><div class="ssp"><div class="spkc"><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div></div>
-      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess3.png" alt="Session 3" alt="Session 3" alt="Session 3"><div class="sc-body"><div class="st">13:00<small>– 13:45</small></div><div><div class="stitle">Innovating Thai Traditional Medicine for the Global Perspective</div><div class="sdesc">Cutting-edge TTM research from Siriraj Hospital — bridging ancient knowledge and contemporary science.</div><div class="ssp"><div class="spkc"><div class="av">KJ</div> Dr. Ketmanee Jongjiamdee · Siriraj</div><div class="spkc"><div class="av">DM</div> Dollaporn Mamaethong · Siriraj</div></div></div></div></div>
-      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess4.png" alt="Session 4" alt="Session 4" alt="Session 4"><div class="sc-body"><div class="st">14:00<small>– 14:45</small></div><div><div class="stitle">Luxury is the New Thai: Can T-Beauty Win the Premium Skincare Market?</div><div class="sdesc">Leaders from Thailand's most respected luxury brands debate the real opportunities for T-Beauty on the global stage.</div><div class="ssp"><div class="spkc"><div class="av">SN</div> Sanchai · HARNN</div><div class="spkc"><div class="av">CK</div> Chayadhorn · INGU</div><div class="spkc"><div class="av">PS</div> Padcha · Praew</div><div class="spkc"><div class="av">PP</div> Premjit · Minor Hotels</div></div></div></div></div>
-      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess5.png" alt="Session 5" alt="Session 5" alt="Session 5"><div class="sc-body"><div class="st">15:00<small>– 15:45</small></div><div><div class="stitle">Skin Longevity: What's Real, What's Hype, and What's Next?</div><div class="sdesc">Clinical evidence and honest analysis on skin longevity — separating science from marketing.</div><div class="ssp"><div class="spkc"><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div></div>
-      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess6.png" alt="Session 6" alt="Session 6" alt="Session 6"><div class="sc-body"><div class="st">16:00<small>– 16:45</small></div><div><div class="stitle">Wellness Entrepreneurs Workshop with Pitch Practice</div><div class="sdesc">Practical business insights combined with a live pitch practice session by industry leaders.</div><div class="ssp"><div class="spkc"><div class="av">KR</div> Krod · Chiva-Som</div><div class="spkc"><div class="av">PP</div> Premjit · Minor Hotels</div><div class="spkc"><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><div class="av">NB</div> Dr. Natnaree · BDMS</div></div></div></div></div>
+      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess1.png" alt="Session 1" alt="Session 1" alt="Session 1"><div class="sc-body"><div class="st">10:15<small>– 11:00</small></div><div><div class="stitle">Wellness Tourism Initiative Trend 2026</div><div class="sdesc">Key trends shaping wellness tourism in 2026 — regenerative travel, longevity retreats, authentic Thai experiences.</div><div class="ssp"><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">SW</div> Sunai Wachirawarakarn · TSPA &amp; GWI</div></div></div></div></div>
+      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess2.png" alt="Session 2" alt="Session 2" alt="Session 2"><div class="sc-body"><div class="st">11:15<small>– 12:00</small></div><div><div class="stitle">AI in Wellness: How AI Will Transform Marketing, Operations &amp; Guest Experience</div><div class="sdesc">Practical overview of AI's impact — from personalisation to operations. Real-world examples from the global wellness industry.</div><div class="ssp"><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div></div>
+      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess3.png" alt="Session 3" alt="Session 3" alt="Session 3"><div class="sc-body"><div class="st">13:00<small>– 13:45</small></div><div><div class="stitle">Innovating Thai Traditional Medicine for the Global Perspective</div><div class="sdesc">Cutting-edge TTM research from Siriraj Hospital — bridging ancient knowledge and contemporary science.</div><div class="ssp"><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">KJ</div> Dr. Ketmanee Jongjiamdee · Siriraj</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">DM</div> Dollaporn Mamaethong · Siriraj</div></div></div></div></div>
+      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess4.png" alt="Session 4" alt="Session 4" alt="Session 4"><div class="sc-body"><div class="st">14:00<small>– 14:45</small></div><div><div class="stitle">Luxury is the New Thai: Can T-Beauty Win the Premium Skincare Market?</div><div class="sdesc">Leaders from Thailand's most respected luxury brands debate the real opportunities for T-Beauty on the global stage.</div><div class="ssp"><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">SN</div> Sanchai · HARNN</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">CK</div> Chayadhorn · INGU</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">PS</div> Padcha · Praew</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">PP</div> Premjit · Minor Hotels</div></div></div></div></div>
+      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess5.png" alt="Session 5" alt="Session 5" alt="Session 5"><div class="sc-body"><div class="st">15:00<small>– 15:45</small></div><div><div class="stitle">Skin Longevity: What's Real, What's Hype, and What's Next?</div><div class="sdesc">Clinical evidence and honest analysis on skin longevity — separating science from marketing.</div><div class="ssp"><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">SD</div> Samantha Dunn · ASWELL</div></div></div></div></div>
+      <div class="sc"><img class="sc-img" src="https://naiaromd.github.io/wswc2026/sess6.png" alt="Session 6" alt="Session 6" alt="Session 6"><div class="sc-body"><div class="st">16:00<small>– 16:45</small></div><div><div class="stitle">Wellness Entrepreneurs Workshop with Pitch Practice</div><div class="sdesc">Practical business insights combined with a live pitch practice session by industry leaders.</div><div class="ssp"><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">KR</div> Krod · Chiva-Som</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">PP</div> Premjit · Minor Hotels</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">WS</div> Dr. Wanviput · VitalLife</div><div class="spkc"><span style="opacity:.5;font-size:10px">#</span><div class="av">NB</div> Dr. Natnaree · BDMS</div></div></div></div></div>
     </div>
   </div>
 </section>
@@ -457,9 +457,9 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
     <h2 class="h2">Hands-On Innovation</h2>
     <p class="lead">3 exclusive workshops — สร้างผลิตภัณฑ์ wellness จริงกับ ingredient specialists ชั้นนำของไทย</p>
     <div class="ws-grid">
-      <div class="wsc"><img class="wsc-img" src="https://naiaromd.github.io/wswc2026/ws1.png" alt="Workshop 1" alt="Workshop 1" alt="Workshop 1"><div class="wsc-body"><div class="wsc-num"><i data-lucide="moon" style="width:13px;height:13px"></i> Workshop 1</div><div class="wsc-title">Circadian Aromachology<br>Pillow &amp; Linen Mist</div><div class="wsc-by">by iamingredient × THEMYTH</div><div class="wsc-desc">Science of aromachology aligned with the body's circadian rhythm. Create a sleep-focused pillow &amp; linen mist through evidence-based scent formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
-      <div class="wsc"><img class="wsc-img" src="https://naiaromd.github.io/wswc2026/ws2.png" alt="Workshop 2" alt="Workshop 2" alt="Workshop 2"><div class="wsc-body"><div class="wsc-num"><i data-lucide="leaf" style="width:13px;height:13px"></i> Workshop 2</div><div class="wsc-title">Thai Elemental Hair Mist</div><div class="wsc-by">by TCFF</div><div class="wsc-desc">Rooted in Thai Elemental Medicine and Dhatu philosophy — translate ancient Thai botanical wisdom into a contemporary, effective hair care formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
-      <div class="wsc"><img class="wsc-img" src="https://naiaromd.github.io/wswc2026/ws3.png" alt="Workshop 3" alt="Workshop 3" alt="Workshop 3"><div class="wsc-body"><div class="wsc-num"><i data-lucide="brain" style="width:13px;height:13px"></i> Workshop 3</div><div class="wsc-title">Neuro Well-being Body Oil</div><div class="wsc-by">by IplusQ</div><div class="wsc-desc">At the frontier of neuro-cosmetics — formulate a body oil designed to support emotional balance, stress response and neurological well-being.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
+      <div class="wsc"><img class="wsc-img" src="https://naiaromd.github.io/wswc2026/ws1.png" alt="Workshop 1" alt="Workshop 1" alt="Workshop 1"><div class="wsc-body"><div class="wsc-num"><i data-lucide="clock" style="width:12px;height:12px"></i> 14:00 – 15:00 &nbsp;·&nbsp; <span style="font-weight:700;color:var(--tspa-sky);letter-spacing:.05em">#W1</span></div><div class="wsc-title">Circadian Aromachology<br>Pillow &amp; Linen Mist</div><div class="wsc-by">by iamingredient × THEMYTH</div><div class="wsc-desc">Science of aromachology aligned with the body's circadian rhythm. Create a sleep-focused pillow &amp; linen mist through evidence-based scent formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
+      <div class="wsc"><img class="wsc-img" src="https://naiaromd.github.io/wswc2026/ws2.png" alt="Workshop 2" alt="Workshop 2" alt="Workshop 2"><div class="wsc-body"><div class="wsc-num"><i data-lucide="clock" style="width:12px;height:12px"></i> 13:00 – 14:00 &nbsp;·&nbsp; <span style="font-weight:700;color:var(--tspa-sky);letter-spacing:.05em">#W2</span></div><div class="wsc-title">Thai Elemental Hair Mist</div><div class="wsc-by">by TCFF</div><div class="wsc-desc">Rooted in Thai Elemental Medicine and Dhatu philosophy — translate ancient Thai botanical wisdom into a contemporary, effective hair care formulation.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
+      <div class="wsc"><img class="wsc-img" src="https://naiaromd.github.io/wswc2026/ws3.png" alt="Workshop 3" alt="Workshop 3" alt="Workshop 3"><div class="wsc-body"><div class="wsc-num"><i data-lucide="clock" style="width:12px;height:12px"></i> 15:00 – 16:00 &nbsp;·&nbsp; <span style="font-weight:700;color:var(--tspa-sky);letter-spacing:.05em">#W3</span></div><div class="wsc-title">Neuro Well-being Body Oil</div><div class="wsc-by">by IplusQ</div><div class="wsc-desc">At the frontier of neuro-cosmetics — formulate a body oil designed to support emotional balance, stress response and neurological well-being.</div><div class="wsc-price"><i data-lucide="tag" style="width:12px;height:12px"></i> 1,000 ฿</div></div></div>
     </div>
     <div class="bundle-bar">
       <div><div class="bundle-bar-left"><i data-lucide="package" style="width:15px;height:15px;display:inline;vertical-align:middle;margin-right:6px"></i>Bundle: ทั้ง 3 Workshops</div><div class="bundle-bar-save">ประหยัด 1,000 ฿ เมื่อเลือกครบ 3 Workshop</div></div>
@@ -642,198 +642,138 @@ footer p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
     <div class="form-hd">
       <div class="eye" style="display:block">Registration</div>
       <h2 class="h2" style="font-size:32px">ลงทะเบียนเข้าร่วมงาน</h2>
-      <p style="font-size:15px;color:var(--ink-700);margin-top:4px">กรอกข้อมูล 4 ขั้นตอน — รับ e-badge ยืนยันการเข้าร่วม WSWC 2026</p>
+      <p style="font-size:15px;color:var(--ink-700);margin-top:4px">กรอกแบบฟอร์มด้านล่าง — รับ e-badge ยืนยันการเข้าร่วม WSWC 2026</p>
     </div>
 
     <!-- Progress -->
-    <div class="prog" id="progBar">
-      <div class="sni act" id="sn1"><div class="sdot">1</div><div class="slbl">ตัวตน</div></div>
-      <div class="sni" id="sn2"><div class="sdot">2</div><div class="slbl">ประเภท</div></div>
-      <div class="sni" id="sn3"><div class="sdot">3</div><div class="slbl">Sessions</div></div>
-      <div class="sni" id="sn4"><div class="sdot">4</div><div class="slbl">ยืนยัน</div></div>
-    </div>
-
-    <div class="fc" id="formCard">
-
-      <!-- STEP 1 -->
-      <div class="fs act" id="step1">
-        <div class="fs-title">ข้อมูลส่วนตัว</div>
-        <div class="fs-desc">ข้อมูลพื้นฐานสำหรับยืนยันการลงทะเบียนและออก e-badge</div>
-        <div class="row"><div class="field"><label>ชื่อ <span class="req">*</span></label><input type="text" id="fname" placeholder="ชื่อจริง / First Name"></div><div class="field"><label>นามสกุล <span class="req">*</span></label><input type="text" id="lname" placeholder="นามสกุล / Last Name"></div></div>
-        <div class="row"><div class="field"><label>ตำแหน่ง <span class="req">*</span></label><input type="text" id="position" placeholder="เช่น Spa Director, Founder"></div><div class="field"><label>องค์กร / บริษัท <span class="req">*</span></label><input type="text" id="org" placeholder="ชื่อองค์กร"></div></div>
-        <div class="row"><div class="field"><label>อีเมล <span class="req">*</span></label><input type="email" id="email" placeholder="your@email.com"></div><div class="field"><label>ประเทศ <span class="req">*</span></label><select id="country"><option value="">เลือกประเทศ</option><option value="TH" selected>Thailand / ประเทศไทย</option><option value="SG">Singapore</option><option value="MY">Malaysia</option><option value="ID">Indonesia</option><option value="VN">Vietnam</option><option value="AU">Australia</option><option value="JP">Japan</option><option value="KR">South Korea</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="OTHER">Other</option></select></div></div>
-        <div class="row full"><div class="field"><label>เบอร์โทร <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-500)">(สำหรับ SMS reminder)</span></label><input type="tel" id="phone" placeholder="+66 81 000 0000"></div></div>
-        <div class="fnav"><span></span><button class="btn btn-gold" onclick="goStep(2)">ถัดไป ›</button></div>
-      </div>
-
-      <!-- STEP 2 -->
-      <div class="fs" id="step2">
-        <div class="fs-title">ประเภทผู้เข้าร่วม</div>
-        <div class="fs-desc">เลือกประเภทของท่านเพื่อกำหนดสิทธิ์และราคา</div>
-        <div class="tier-grid">
-          <input type="radio" name="tier" id="t1" class="ti" value="member" onchange="onTier()">
-          <label for="t1" class="tc"><div class="tc-badge">สมาชิก TSPA</div><div class="tc-name">TSPA Member</div><div class="tc-who">สมาชิกสมาคมสปาไทย — รับสิทธิ์ครบทุกอย่าง</div><div class="tc-price free-p">FREE</div><div class="tc-incl">Congress + Workshops ทั้ง 3</div></label>
-
-          <input type="radio" name="tier" id="t2" class="ti" value="licensed" onchange="onTier()">
-          <label for="t2" class="tc"><div class="tc-name">Licensed Spa Manager</div><div class="tc-who">ผู้ถือใบอนุญาต Spa Manager</div><div class="tc-price free-p">FREE</div><div class="tc-incl">Congress Entry</div></label>
-
-          <input type="radio" name="tier" id="t3" class="ti" value="partner" onchange="onTier()">
-          <label for="t3" class="tc"><div class="tc-name">Association Partner</div><div class="tc-who">APSWC · ASWELL · GWI และสมาคมพันธมิตร</div><div class="tc-price free-p">FREE</div><div class="tc-incl">Congress Entry</div></label>
-
-          <input type="radio" name="tier" id="t4" class="ti" value="general" onchange="onTier()">
-          <label for="t4" class="tc"><div class="tc-name">General Public</div><div class="tc-who">บุคคลทั่วไป</div><div class="tc-price">฿1,500</div><div class="tc-incl">Congress Entry</div></label>
-        </div>
-
-        <div class="vbox" id="v-member">
-          <div class="vbox-lbl"><i data-lucide="shield-check" style="width:13px;height:13px"></i> ยืนยันสมาชิกภาพ</div>
-          <div class="field"><label>TSPA Membership Number <span class="req">*</span></label><input type="text" id="memberNo" placeholder="เช่น TSPA-2025-XXXX"></div>
-          <div class="hint">ทีมงาน TSPA จะ cross-check และส่ง confirmation ภายใน 1–2 วันทำการ</div>
-        </div>
-        <div class="vbox" id="v-licensed">
-          <div class="vbox-lbl"><i data-lucide="award" style="width:13px;height:13px"></i> ยืนยัน License</div>
-          <div class="field"><label>License Number <span class="req">*</span></label><input type="text" id="licenseNo" placeholder="หมายเลขใบอนุญาต Spa Manager"></div>
-          <div class="hint">หมายเลขใบอนุญาตจาก TSPA หรือกรมสนับสนุนบริการสุขภาพ (สบส.)</div>
-        </div>
-        <div class="vbox" id="v-partner">
-          <div class="vbox-lbl"><i data-lucide="handshake" style="width:13px;height:13px"></i> ยืนยัน Partner</div>
-          <div class="field"><label>สมาคม <span class="req">*</span></label><select id="partnerOrg"><option value="">เลือกสมาคม</option><option value="APSWC">APSWC — Asia Pacific Spa &amp; Wellness Coalition</option><option value="ASWELL">ASWELL — Australasian Wellness Association</option><option value="GWI">GWI — Global Wellness Institute</option><option value="IWPA">IWPA — International Wellness Professionals Association</option><option value="OTHER">Other Partner Association</option></select></div>
-          <div class="field" style="margin-top:10px"><label>Professional Email</label><input type="email" id="partnerEmail" placeholder="your@association.org"></div>
-        </div>
-        <div class="fnav"><button class="btn btn-outline" onclick="goStep(1)">‹ ย้อนกลับ</button><button class="btn btn-gold" onclick="goStep(3)">ถัดไป ›</button></div>
-      </div>
-
-      <!-- STEP 3 -->
-      <div class="fs" id="step3">
-        <div class="fs-title">Sessions &amp; Workshops</div>
-        <div class="fs-desc">เลือก sessions และ workshops ที่ต้องการเข้าร่วม</div>
-
-        <div style="margin-bottom:6px"><label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-700)">Congress Sessions</label></div>
-        <label class="all-btn" for="allSess"><input type="checkbox" id="allSess" onchange="toggleAll(this)" style="accent-color:var(--gold-d);width:16px;height:16px"> เข้าร่วมทุก Session ตลอดทั้งวัน</label>
-        <div class="sl">
-          <input type="checkbox" id="ss1" class="sci" value="10:15 Wellness Tourism"><label for="ss1" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">10:15</div><div class="stl">Wellness Tourism Initiative Trend 2026</div><div class="ssp2">Sunai Wachirawarakarn · TSPA &amp; GWI</div></div></label>
-          <input type="checkbox" id="ss2" class="sci" value="11:15 AI in Wellness"><label for="ss2" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">11:15</div><div class="stl">AI in Wellness</div><div class="ssp2">Samantha Dunn · ASWELL</div></div></label>
-          <input type="checkbox" id="ss3" class="sci" value="13:00 Thai TTM"><label for="ss3" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">13:00</div><div class="stl">Innovating Thai Traditional Medicine</div><div class="ssp2">Dr. Ketmanee + Dollaporn · Siriraj Hospital</div></div></label>
-          <input type="checkbox" id="ss4" class="sci" value="14:00 T-Beauty Panel"><label for="ss4" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">14:00</div><div class="stl">Luxury is the New Thai: T-Beauty Panel</div><div class="ssp2">HARNN · INGU · Praew · Minor Hotels · Siriraj</div></div></label>
-          <input type="checkbox" id="ss5" class="sci" value="15:00 Skin Longevity"><label for="ss5" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">15:00</div><div class="stl">Skin Longevity: What's Real, What's Hype?</div><div class="ssp2">Dr. Wanviput (VitalLife) · Samantha Dunn (ASWELL)</div></div></label>
-          <input type="checkbox" id="ss6" class="sci" value="16:00 Entrepreneurs Workshop"><label for="ss6" class="scl"><div class="cbox"></div><div class="si2"><div class="stb">16:00</div><div class="stl">Wellness Entrepreneurs Workshop &amp; Pitch</div><div class="ssp2">Chiva-Som · Minor Hotels · VitalLife · BDMS · ASWELL</div></div></label>
-        </div>
-
-        <div style="margin:20px 0 8px;display:flex;justify-content:space-between;align-items:center">
-          <label style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-700)">Hands-On Workshops</label>
-          <span id="wsFreeBadge" style="display:none;font-size:12px;color:var(--success);font-weight:700;align-items:center;gap:4px"><i data-lucide="check-circle" style="width:12px;height:12px"></i> สมาชิก: ฟรีทั้ง 3</span>
-        </div>
-        <div class="mfree" id="memberFreeNote"><i data-lucide="gift" style="width:15px;height:15px;flex-shrink:0"></i> ในฐานะสมาชิก TSPA คุณได้รับสิทธิ์ Workshop ทั้ง 3 ฟรี</div>
-
-        <div class="wsg">
-          <input type="checkbox" id="w1" class="wsi" value="w1" onchange="calcTotal()"><label for="w1" class="wsl"><div class="cbox"></div><div class="wi"><div class="wt">Circadian Aromachology — Pillow &amp; Linen Mist</div><div class="wb">by iamingredient × THEMYTH</div><div class="wd">Aromachology + circadian rhythm → sleep-focused pillow &amp; linen mist formulation</div><div class="wp" id="wp1">1,000 ฿</div></div></label>
-          <input type="checkbox" id="w2" class="wsi" value="w2" onchange="calcTotal()"><label for="w2" class="wsl"><div class="cbox"></div><div class="wi"><div class="wt">Thai Elemental Hair Mist</div><div class="wb">by TCFF</div><div class="wd">Dhatu philosophy + Thai botanical knowledge → contemporary hair care formulation</div><div class="wp" id="wp2">1,000 ฿</div></div></label>
-          <input type="checkbox" id="w3" class="wsi" value="w3" onchange="calcTotal()"><label for="w3" class="wsl"><div class="cbox"></div><div class="wi"><div class="wt">Neuro Well-being Body Oil</div><div class="wb">by IplusQ</div><div class="wd">Neuro-cosmetics → body oil for emotional balance &amp; neurological well-being</div><div class="wp" id="wp3">1,000 ฿</div></div></label>
-        </div>
-
-        <div class="bnote" id="bundleNote">
-          <i data-lucide="zap" style="width:15px;height:15px;flex-shrink:0;color:var(--gold-d);margin-top:1px"></i>
-          <span><strong>Bundle Deal:</strong> เลือกทั้ง 3 Workshop ราคา <strong>2,000 ฿</strong> แทน 3,000 ฿ — ประหยัด 1,000 ฿ ทันที</span>
-        </div>
-
-        <div style="margin-top:18px"><div class="field"><label>ภาษาที่ต้องการรับข่าวสาร</label><div class="og" style="margin-top:5px"><input type="radio" name="lang" id="lth" class="oi" value="Thai"><label for="lth" class="ol">ภาษาไทย</label><input type="radio" name="lang" id="len" class="oi" value="English"><label for="len" class="ol">English</label><input type="radio" name="lang" id="lbt" class="oi" value="Both" checked><label for="lbt" class="ol">ทั้งสอง</label></div></div></div>
-
-        <div class="fnav"><button class="btn btn-outline" onclick="goStep(2)">‹ ย้อนกลับ</button><button class="btn btn-gold" onclick="goStep(4)">ถัดไป ›</button></div>
-      </div>
-
-      <!-- STEP 4 -->
-      <div class="fs" id="step4">
-        <div class="fs-title">ยืนยัน &amp; ชำระเงิน</div>
-        <div class="fs-desc">ตรวจสอบรายการและชำระเงิน (ถ้ามี) เพื่อยืนยันการลงทะเบียน</div>
-
-        <div class="obox">
-          <div class="otitle"><i data-lucide="receipt" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:4px"></i> Order Summary</div>
-          <div class="orow" id="or-congress"><span>Congress Access (6 Sessions)</span><span id="or-cp">—</span></div>
-          <div class="orow" id="or-w1" style="display:none"><span>Workshop 1: Circadian Aromachology</span><span id="or-w1p">—</span></div>
-          <div class="orow" id="or-w2" style="display:none"><span>Workshop 2: Thai Elemental Hair Mist</span><span id="or-w2p">—</span></div>
-          <div class="orow" id="or-w3" style="display:none"><span>Workshop 3: Neuro Well-being Body Oil</span><span id="or-w3p">—</span></div>
-          <div class="orow fr" id="or-bd" style="display:none"><span>Bundle Discount (3 Workshops)</span><span>- 1,000 ฿</span></div>
-          <hr class="odiv">
-          <div class="ototal"><span>Total</span><span class="amt" id="totalAmt">—</span></div>
-        </div>
-
-        <!-- PromptPay QR -->
-        <div class="paybox" id="payBox">
-          <div class="paytitle"><i data-lucide="qr-code" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:5px"></i> ชำระเงินผ่าน PromptPay</div>
-          <div class="qrwrap">
-            <div class="qrimg">
-              <!-- Replace with real PromptPay QR image -->
-              <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" width="130" height="130">
-                <rect width="130" height="130" fill="white"/>
-                <!-- Corner squares -->
-                <rect x="10" y="10" width="34" height="34" rx="2" fill="none" stroke="#1A2744" stroke-width="3"/><rect x="17" y="17" width="20" height="20" fill="#1A2744"/>
-                <rect x="86" y="10" width="34" height="34" rx="2" fill="none" stroke="#1A2744" stroke-width="3"/><rect x="93" y="17" width="20" height="20" fill="#1A2744"/>
-                <rect x="10" y="86" width="34" height="34" rx="2" fill="none" stroke="#1A2744" stroke-width="3"/><rect x="17" y="93" width="20" height="20" fill="#1A2744"/>
-                <!-- Center area -->
-                <rect x="52" y="52" width="26" height="26" rx="2" fill="none" stroke="#C9A96E" stroke-width="2"/>
-                <rect x="58" y="58" width="14" height="14" rx="1" fill="#C9A96E"/>
-                <!-- Data dots (simplified) -->
-                <rect x="52" y="10" width="6" height="6" fill="#1A2744"/><rect x="62" y="10" width="6" height="6" fill="#1A2744"/><rect x="72" y="10" width="6" height="6" fill="#1A2744"/>
-                <rect x="52" y="20" width="6" height="6" fill="#1A2744"/><rect x="72" y="20" width="6" height="6" fill="#1A2744"/>
-                <rect x="10" y="52" width="6" height="6" fill="#1A2744"/><rect x="20" y="52" width="6" height="6" fill="#1A2744"/>
-                <rect x="10" y="62" width="6" height="6" fill="#1A2744"/><rect x="30" y="62" width="6" height="6" fill="#1A2744"/>
-                <rect x="10" y="72" width="6" height="6" fill="#1A2744"/><rect x="20" y="72" width="6" height="6" fill="#1A2744"/>
-                <text x="65" y="115" text-anchor="middle" font-size="8" fill="#6F7B85" font-family="monospace">PromptPay · TSPA</text>
-              </svg>
-            </div>
-            <div class="qrsteps">
-              <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px">วิธีชำระเงิน</div>
-              <div class="qrrow"><div class="qrn">1</div><div>เปิดแอปธนาคารและเลือก "สแกน QR"</div></div>
-              <div class="qrrow"><div class="qrn">2</div><div>สแกน QR Code PromptPay ของสมาคมสปาไทย</div></div>
-              <div class="qrrow"><div class="qrn">3</div><div>กรอกจำนวน <strong id="amtRemind"></strong></div></div>
-              <div class="qrrow"><div class="qrn">4</div><div>แนบ Slip การโอนด้านล่าง</div></div>
-              <div style="margin-top:14px;padding:12px 14px;background:#F4F7FA;border-radius:6px;border-left:3px solid #038DB9">
-                <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6F7B85;margin-bottom:6px">โอนผ่านบัญชีธนาคาร</div>
-                <div style="display:flex;align-items:center;gap:10px">
-                  <div style="width:32px;height:32px;background:#1BA345;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#fff;font-size:13px;font-weight:700">K</span></div>
-                  <div>
-                    <div style="font-size:13px;font-weight:700;color:#1F2A33">ธนาคารกสิกรไทย (KBank)</div>
-                    <div style="font-size:16px;font-weight:700;color:#038DB9;letter-spacing:.08em;margin-top:2px">611-2-03955-2</div>
-                    <div style="font-size:12px;color:#6F7B85;margin-top:1px">สมาคมสปาไทย</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-top:14px">
-            <div class="field"><label>แนบสลิปการโอนเงิน <span class="req">*</span></label><input type="file" id="slip" accept="image/*,.pdf" style="padding:8px"></div>
-            <div class="hint">รองรับ JPG, PNG, PDF — confirm หลังทีมงานตรวจสอบภายใน 1–2 วันทำการ</div>
-          </div>
-        </div>
-
-        <!-- Profile compact -->
-        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--ink-200)">
-          <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-700);margin-bottom:12px">Professional Profile</div>
-          <div class="row">
-            <div class="field"><label>Segment <span class="req">*</span></label><select id="segment"><option value="">เลือก...</option><option>Spa &amp; Wellness</option><option>Hotel / Resort Spa</option><option>Wellness Clinic</option><option>Beauty Brand</option><option>Supplier / Product</option><option>Education</option><option>Media</option><option>Investor</option><option>Government</option></select></div>
-            <div class="field"><label>Role Level <span class="req">*</span></label><select id="rolelevel"><option value="">เลือก...</option><option>Owner / Founder</option><option>Director</option><option>Manager</option><option>Therapist / Practitioner</option><option>Educator</option><option>Student</option></select></div>
-          </div>
-        </div>
-
-        <div class="optin"><input type="checkbox" id="optin" checked><label for="optin" class="optin-txt"><strong>รับข่าวสาร TSPA</strong> — ยินดีรับข้อมูลและโอกาสทางธุรกิจจากสมาคมสปาไทย</label></div>
-
-        <div class="fnav">
-          <button class="btn btn-outline" onclick="goStep(3)">‹ ย้อนกลับ</button>
-          <button class="btn btn-gold btn-lg" onclick="submitForm()"><i data-lucide="check" style="width:15px;height:15px"></i> ยืนยันการลงทะเบียน ›</button>
-        </div>
-      </div>
-    </div><!-- /formCard -->
-
-    <!-- SUCCESS -->
-    <div class="fc suc" id="successState">
-      <div class="suc-icon"><i data-lucide="check" style="width:26px;height:26px"></i></div>
-      <div class="suc-title">ลงทะเบียนสำเร็จ</div>
-      <div class="suc-desc" id="sucDesc">ขอบคุณสำหรับการลงทะเบียน เราจะส่ง e-badge และตารางเวลาไปยังอีเมลของคุณภายใน 24 ชั่วโมง</div>
-      <div class="suc-pending" id="sucPending"><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:5px"></i><strong>รอการยืนยัน:</strong> ทีมงาน TSPA จะตรวจสอบและส่ง confirmed e-badge ภายใน 1–2 วันทำการ</div>
-      <div class="suc-badge"><i data-lucide="calendar-check" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:5px"></i>26 June 2026 · QSNCC Bangkok</div>
-      <div style="margin-top:16px"><button class="btn btn-outline" onclick="resetForm()">ลงทะเบียนอีกท่าน</button></div>
+    <!-- Tally Embed -->
+    <div style="margin-top:8px;border-radius:4px;overflow:hidden">
+      <iframe data-tally-src="https://tally.so/embed/VLN8Nl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="WSWC 2026 Registration"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     </div>
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="flog">
+      <svg width="20" height="24" viewBox="0 0 40 48" fill="none"><path d="M20 2C20 2 4 18 4 30C4 39.5 11.2 46 20 46C28.8 46 36 39.5 36 30C36 18 20 2 20 2Z" fill="none" stroke="#C9A96E" stroke-width="2.5"/></svg>
+      <span class="fbrand">Thai Spa Association</span>
+    </div>
+    <p>World Spa &amp; Well-being Congress 2026<br>26 June 2026 · QSNCC · CosmoprofCBE ASEAN · Bangkok, Thailand</p>
+    <div class="ftag">รวมกันเราอยู่ — Together We Stand</div>
+  </div>
+</footer>
+
+<script>
+lucide.createIcons();
+let cur=1, tierVal='', wsC={w1:false,w2:false,w3:false};
+
+function onTier(){
+  tierVal=document.querySelector('input[name="tier"]:checked')?.value||'';
+  document.querySelectorAll('.vbox').forEach(b=>b.classList.remove('show'));
+  if(tierVal==='member') document.getElementById('v-member').classList.add('show');
+  if(tierVal==='licensed') document.getElementById('v-licensed').classList.add('show');
+  if(tierVal==='partner') document.getElementById('v-partner').classList.add('show');
+  const isMem=tierVal==='member';
+  document.getElementById('memberFreeNote').classList.toggle('show',isMem);
+  const fb=document.getElementById('wsFreeBadge');
+  fb.style.display=isMem?'inline-flex':'none';
+  ['w1','w2','w3'].forEach((_,i)=>{
+    const el=document.getElementById('wp'+(i+1));
+    el.innerHTML=isMem?'<span style="color:var(--success);font-weight:700">FREE — สิทธิ์สมาชิก</span>':'1,000 ฿';
+    el.className='wp'+(isMem?' free-w':'');
+  });
+  calcTotal();
+  lucide.createIcons();
+}
+
+function calcTotal(){
+  ['w1','w2','w3'].forEach(w=>wsC[w]=document.getElementById(w).checked);
+  const nw=Object.values(wsC).filter(Boolean).length;
+  const isMem=tierVal==='member';
+  const cg=tierVal==='general'?1500:0;
+  const ws=isMem?0:(nw===3?2000:nw*1000);
+  const tot=cg+ws;
+  const cp=document.getElementById('or-cp');
+  if(cp) cp.textContent=cg===0?'FREE':cg.toLocaleString()+' ฿';
+  const ta=document.getElementById('totalAmt');
+  if(ta){ta.textContent=tot===0?'FREE':tot.toLocaleString()+' ฿';ta.className='amt'+(tot===0?' zero':'');}
+  ['w1','w2','w3'].forEach((w,i)=>{
+    const r=document.getElementById('or-'+w);
+    if(r) r.style.display=wsC[w]?'':'none';
+    const p=document.getElementById('or-'+w+'p');
+    if(p) p.textContent=isMem?'FREE':'1,000 ฿';
+  });
+  const bd=document.getElementById('or-bd');
+  if(bd) bd.style.display=(!isMem&&nw===3)?'':'none';
+  const pb=document.getElementById('payBox');
+  if(pb) pb.classList.toggle('show',tot>0);
+  const ar=document.getElementById('amtRemind');
+  if(ar) ar.textContent=tot>0?tot.toLocaleString()+' ฿':'';
+}
+
+function toggleAll(cb){document.querySelectorAll('.sci').forEach(c=>c.checked=cb.checked);}
+
+function goStep(n){
+  if(n===2&&cur===1){
+    if(!document.getElementById('fname').value.trim()||!document.getElementById('lname').value.trim()||!document.getElementById('position').value.trim()||!document.getElementById('org').value.trim()||!document.getElementById('email').value.trim()||!document.getElementById('country').value){alert('กรุณากรอกข้อมูลที่จำเป็นให้ครบถ้วน');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value)){alert('กรุณากรอกอีเมลให้ถูกต้อง');return;}
+  }
+  if(n===3&&cur===2){
+    if(!document.querySelector('input[name="tier"]:checked')){alert('กรุณาเลือกประเภทผู้เข้าร่วม');return;}
+    if(tierVal==='member'&&!document.getElementById('memberNo').value.trim()){alert('กรุณากรอก Membership Number');return;}
+    if(tierVal==='licensed'&&!document.getElementById('licenseNo').value.trim()){alert('กรุณากรอก License Number');return;}
+    if(tierVal==='partner'&&!document.getElementById('partnerOrg').value){alert('กรุณาเลือกสมาคม');return;}
+  }
+  if(n===4&&cur===3){
+    const hs=document.querySelectorAll('.sci:checked').length>0||document.getElementById('allSess').checked;
+    if(!hs){alert('กรุณาเลือกอย่างน้อย 1 session');return;}
+    calcTotal();
+  }
+  document.getElementById('step'+cur).classList.remove('act');
+  document.getElementById('step'+n).classList.add('act');
+  for(let i=1;i<=4;i++){const e=document.getElementById('sn'+i);e.classList.remove('act','done');if(i<n)e.classList.add('done');else if(i===n)e.classList.add('act');}
+  cur=n;
+  window.scrollTo({top:document.getElementById('register').offsetTop-70,behavior:'smooth'});
+  lucide.createIcons();
+}
+
+function getTotal(){
+  const isMem=tierVal==='member',nw=['w1','w2','w3'].filter(w=>document.getElementById(w).checked).length;
+  return (tierVal==='general'?1500:0)+(isMem?0:(nw===3?2000:nw*1000));
+}
+
+function submitForm(){
+  if(!document.getElementById('segment').value||!document.getElementById('rolelevel').value){alert('กรุณาเลือก Segment และ Role Level');return;}
+  const tot=getTotal();
+  if(tot>0&&!document.getElementById('slip').value){alert('กรุณาแนบสลิปการโอนเงิน');return;}
+  document.getElementById('formCard').style.display='none';
+  document.getElementById('progBar').style.display='none';
+  const s=document.getElementById('successState');
+  s.classList.add('act');
+  if(tot===0){document.getElementById('sucDesc').textContent='ขอบคุณสำหรับการลงทะเบียน เราจะส่ง e-badge และตารางเวลาไปยังอีเมลของคุณภายใน 24 ชั่วโมง';document.getElementById('sucPending').style.display='none';}
+  else{document.getElementById('sucDesc').textContent='ได้รับการลงทะเบียนของคุณแล้ว';document.getElementById('sucPending').style.display='block';}
+  lucide.createIcons();
+  window.scrollTo({top:document.getElementById('register').offsetTop-70,behavior:'smooth'});
+}
+
+function resetForm(){
+  document.getElementById('formCard').style.display='block';
+  document.getElementById('progBar').style.display='flex';
+  document.getElementById('successState').classList.remove('act');
+  goStep(1);
+}
+</script>
+</body>
+</html>
+    <!-- Tally Embed -->
+    <div style="margin-top:8px;border-radius:4px;overflow:hidden">
+      <iframe data-tally-src="https://tally.so/embed/VLN8Nl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="WSWC 2026 Registration"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
+  </div></section>
 
 <!-- FOOTER -->
 <footer>
